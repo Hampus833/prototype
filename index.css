@@ -1,0 +1,15 @@
+:root {
+    --main-color: #212842;
+    --text-color: #F0E7D5;
+    --button-color: #715DA1;
+    --points-color: #9384BB;
+    --leaderboard-color: #9D578A;
+}
+
+@font-face {
+    font-family: "2p";
+    src: 
+        local("Press Start 2P"),
+        url("fonts/Press_Start_2P/PressStart2P-Regular.ttf"),
+        url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap")
+}
