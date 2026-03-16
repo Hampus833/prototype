@@ -6,7 +6,7 @@ function renderHeader(parent) {
         <p class="clickable" id="leaderboard">Leaderboard</p>
     </div>
     <div id="header-right">
-        <p id="nickname">Nickname</p>
+        <p id="nickname">${appState.nickname}</p>
         <p id="level">LV.1</p>
         <div id="avatar"></div>
     </div>
