@@ -4,6 +4,8 @@
     --button-color: #715DA1;
     --points-color: #9384BB;
     --leaderboard-color: #9D578A;
+    --body-text: 16px;
+    --heading-text: 32px;
 }
 
 * {
