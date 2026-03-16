@@ -6,6 +6,10 @@
     --leaderboard-color: #9D578A;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "2p";
     src: 
@@ -16,6 +20,16 @@
 
 body {
     background-color: var(--main-color);
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background-image: url(images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    background-position: bottom;
 }
 
 p {
