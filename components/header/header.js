@@ -11,4 +11,12 @@ function renderHeader(parent) {
         <div id="avatar"></div>
     </div>
     `;
+    console.log("hej")
+    header.querySelector("#leaderboard").addEventListener("click", testFunction);
+}
+
+function testFunction(event) {
+    event.preventDefault();
+
+    navigate("/leaderboard", {page: "leaderboard"});
 }
