@@ -13,3 +13,12 @@
         url("fonts/Press_Start_2P/PressStart2P-Regular.ttf"),
         url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap")
 }
+
+body {
+    background-color: var(--main-color);
+}
+
+p {
+    font-family: "2p";
+    color: var(--text-color);
+}
