@@ -12,11 +12,19 @@ function renderHeader(parent) {
     </div>
     `;
     console.log("hej")
-    header.querySelector("#leaderboard").addEventListener("click", testFunction);
+    header.querySelector("#leaderboard").addEventListener("click", navigateToLeaderboard);
 }
 
-function testFunction(event) {
+function navigateToLeaderboard(event) {
     event.preventDefault();
 
     navigate("/leaderboard", {page: "leaderboard"});
+}
+
+function setNickname(nickname) {
+    if (nickname.length > 0) {
+        appState.nickname = nickname;
+        document.getElementById("nickname").textContent = nickname;
+    }
+
 }

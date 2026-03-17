@@ -14,7 +14,7 @@ function renderPage(state) {
     const main = document.querySelector("main");
 
     if (state.page === "start") {
-        main.innerHTML = "";
+        renderStart();
     }
 
     if (state.page === "leaderboard") {

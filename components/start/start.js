@@ -10,10 +10,23 @@ function renderStart() {
         </p>
         <div id="nickname-box">
             <input type="text" id="nickname-input" name="nickname" placeholder="Enter your nickname"></input>
-            <button id="start-button">Start</button>
+            <button id="start-button" class="continue-button">Start</button>
         </div>
     </div>
     `;
 
+
+    parent.querySelector("#start-button").addEventListener("click", startQuiz);
+}
+
+function startQuiz(event) {
+    const input = document.getElementById("nickname-input");
+    const nickname = input.value;
+    if (nickname === "") {
+        alert("Nickname can't be empty");
+    } else {
+        setNickname(nickname);
+        input.value = "";
+    }
 
 }
