@@ -6,6 +6,7 @@
     --leaderboard-color: #9D578A;
     --body-text: 16px;
     --heading-text: 32px;
+    --hover-color: #5a4a81;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
     background-position: bottom;
 }
 
-p {
+p, h1{
     font-family: "2p";
     color: var(--text-color);
 }
