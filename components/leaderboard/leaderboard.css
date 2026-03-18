@@ -13,7 +13,7 @@
 
 #leaderboard-list {
     overflow-y: scroll;
-    height: 80%;
+    height: 600px;
     width: 610px;
     list-style: none;
     margin: 0;
