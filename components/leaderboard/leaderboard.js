@@ -8,6 +8,8 @@ function renderLeaderboard() {
     </div>
     `;
 
+    calculatePlayerPos();
+    
     const list = parent.querySelector("#leaderboard-list");
     for (let l of leaderboardPlayers) {
         const li = document.createElement("li");
@@ -28,5 +30,20 @@ function renderLeaderboard() {
 }
 
 function calculatePlayerPos() {
-    
+    const playerPoints = appState.points;
+    if (playerPoints === 0) {
+        leaderboardPlayers[10].name = appState.nickname;
+        leaderboardPlayers[10].level = appState.level;
+        leaderboardPlayers[10].points = appState.points;
+    }
+
+    for (let l of leaderboardPlayers) {
+        if (playerPoints > l.points) {
+            l.name = appState.nickname;
+            l.level = appState.level;
+            l.points = appState.points;
+            break;
+        }
+    }
+
 }

@@ -2,6 +2,7 @@ let appState = {
     nickname: "Nickname",
     points: 0,
     question: 0,
+    level: 1,
 }
 window.addEventListener("popstate", (event) => {
     if (event.state) {
