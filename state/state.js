@@ -3,6 +3,7 @@ let appState = {
     points: 0,
     question: 0,
     level: 1,
+    question: 1
 }
 
 let quizPage = false;
@@ -100,4 +101,10 @@ const leaderboardPlayers = [
         level: 0,
         points: 0,
     },
-]
+];
+
+const quizQuestions = [{
+    question: 1,
+    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    correctAnswer: 0
+}]
