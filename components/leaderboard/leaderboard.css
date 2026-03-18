@@ -52,3 +52,7 @@
     /* flex-grow: 1; */
     margin: 0;
 }
+
+#leaderboard-pos {
+    flex-basis: 45px;
+}
