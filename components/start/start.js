@@ -20,6 +20,7 @@ function renderStart() {
 }
 
 function startQuiz(event) {
+    //todo set maximum length of nickname to something around 10-12 characters
     const input = document.getElementById("nickname-input");
     const nickname = input.value;
     if (nickname === "") {
