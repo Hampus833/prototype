@@ -4,8 +4,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 0;
     /* justify-content: center; */
 }
+
 #start-content {
     max-width: 610px;
 }

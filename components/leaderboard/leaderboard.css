@@ -4,6 +4,8 @@
     align-items: center;
     /* justify-content: center; */
     height: 100%;
+    overflow-y: scroll;
+    min-height: 0;
 }
 
 #leaderboard-content h1 {
@@ -13,7 +15,6 @@
 
 #leaderboard-list {
     overflow-y: scroll;
-    height: 600px;
     width: 610px;
     list-style: none;
     margin: 0;
@@ -44,7 +45,8 @@
 }
 
 #player-pos {
-    gap: 59px;
+    justify-content: start;
+    gap: 32px;
     width: 219px;
 }
 
