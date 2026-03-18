@@ -21,6 +21,7 @@ function renderPage(state) {
     }
 
     if (state.page === "leaderboard") {
+        renderLeaderboard();
         console.log("Now leaderboard should render");
     }
 }
