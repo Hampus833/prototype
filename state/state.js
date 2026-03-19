@@ -19,15 +19,25 @@ function renderPage(state) {
     //you return to startPage no matter what page you were on after clicking back button on leaderboard, fix
     const main = document.querySelector("main");
     main.innerHTML = "";
-
+    
     if (state.page === "start") {
         renderStart();
+        quizPage = false;
+        showContinue();
     }
-
+    
     if (state.page === "leaderboard") {
         renderLeaderboard();
+        quizPage = false;
+        showContinue();
         console.log("Now leaderboard should render");
     }
+    
+    if (state.page === "quiz") {
+        renderQuiz()
+        showContinue();
+    }
+    
 }
 
 function navigate(url, pageData) {

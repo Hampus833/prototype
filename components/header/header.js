@@ -21,10 +21,16 @@ function navigateToLeaderboard(event) {
     navigate("/leaderboard", {page: "leaderboard"});
 }
 
-function setNickname(nickname) {
+function setNickname(nickname, input) {
+       //todo set maximum length of nickname to something around 10-12 characters
+       //maybe also check if nickname in appState is empty or not otherwise continue with empty input
     if (nickname.length > 0) {
         appState.nickname = nickname;
         document.getElementById("nickname").textContent = nickname;
+        input.value = "";
+        return true;
+    } else {
+        alert("Nickname can't be empty");
+        return false;
     }
-
 }

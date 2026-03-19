@@ -21,13 +21,13 @@ function renderStart() {
 
 function startQuiz(event) {
     //todo set maximum length of nickname to something around 10-12 characters
+    event.preventDefault();
     const input = document.getElementById("nickname-input");
     const nickname = input.value;
-    if (nickname === "") {
-        alert("Nickname can't be empty");
-    } else {
-        setNickname(nickname);
-        input.value = "";
+    if (setNickname(nickname, input)) {
+            //eventually all quiz questions get unique url
+            navigate("/quiz", {page: "quiz"});
+            // showContinue();
     }
-
 }
+

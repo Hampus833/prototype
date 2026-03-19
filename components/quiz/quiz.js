@@ -1,4 +1,5 @@
 function renderQuiz() {
+    //check what question the user is on and render accordingly
     quizPage = true;
     const parent = document.querySelector("main");
     parent.innerHTML = `
