@@ -10,3 +10,7 @@ footer {
 #continue {
     width: 176px;
 }
+
+footer p {
+    color: var(--points-color);
+}
