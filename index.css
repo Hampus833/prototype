@@ -61,3 +61,15 @@ p, h1{
 .continue-button:hover {
     background-color: var(--hover-color);
 }
+
+button {
+    font-family: "2p";
+    background-color: var(--button-color);
+    border: none;
+    color: var(--text-color);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}

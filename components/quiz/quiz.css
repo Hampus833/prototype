@@ -1,0 +1,35 @@
+#quiz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 610px;
+}
+
+#quiz-content h2{
+    font-family: "2p";
+    color: var(--text-color);
+    margin-top: 64px;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+#quiz-content p {
+    line-height: 22px;
+    margin-bottom: 48px;
+    margin-top: 0px;
+    min-height: 80px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+#answers button {
+    height: 65px;
+    font-size: 14px;
+    border-radius: 4px;
+}
