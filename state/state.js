@@ -1,9 +1,8 @@
 let appState = {
     nickname: "Nickname",
     points: 0,
-    question: 0,
+    question: 1,
     level: 1,
-    question: 1
 }
 
 let quizPage = false;
@@ -45,6 +44,7 @@ function navigate(url, pageData) {
     renderPage(pageData);
 }
 
+//add database file and move these arrays
 const leaderboardPlayers = [
     {
         position: 1,
@@ -118,4 +118,5 @@ const quizQuestions = [{
     question: 1,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 0
-}]
+},
+]
