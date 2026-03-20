@@ -1,5 +1,6 @@
 renderHeader(document.querySelector("body"));
-renderStart();
+// renderStart();
+renderCodePage();
 // renderLeaderboard();
 // renderQuiz();
 renderFooter();

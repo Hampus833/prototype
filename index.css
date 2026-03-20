@@ -4,9 +4,10 @@
     --button-color: #715DA1;
     --points-color: #9384BB;
     --leaderboard-color: #9D578A;
+    --hover-color: #5a4a81;
+    --codebox-color:#0C101F;
     --body-text: 16px;
     --heading-text: 32px;
-    --hover-color: #5a4a81;
 }
 
 * {
@@ -42,6 +43,10 @@ body {
     background-position: bottom;
 }
 
+p {
+    line-height: 22px;
+}
+
 p, h1{
     font-family: "2p";
     color: var(--text-color);
@@ -72,4 +77,13 @@ button {
 button:hover {
     cursor: pointer;
     background-color: var(--hover-color);
+}
+
+h2 {
+    font-family: "2p";
+    color: var(--text-color);
+    /* margin-top: 64px;
+    margin-bottom: 24px; */
+    font-size: 16px;
+    color: var(--points-color);
 }
