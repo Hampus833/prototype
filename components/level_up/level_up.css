@@ -1,0 +1,16 @@
+#level-up-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#level-up-content {
+    text-align: center;
+}
+
+#level-up-content span {
+    color: var(--points-color);
+}
