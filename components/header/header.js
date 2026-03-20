@@ -13,6 +13,30 @@ function renderHeader(parent) {
     `;
     console.log("hej")
     header.querySelector("#leaderboard").addEventListener("click", navigateToLeaderboard);
+    newBadgePopUp();
+}
+
+function newBadgePopUp() {
+    //badges should probably be svgs, only template for now
+    const parent = document.createElement("div")
+    parent.setAttribute("id", "new-badge-popup");
+    parent.innerHTML = `
+    <div id="triangle"></div>
+    <div id="new-badge-info-content">
+        <p>New badge unlocked!</p>
+        <div class="badge">
+            <p>2</p>
+        </div>
+    </div>
+    `;
+    document.querySelector("#wrapper").appendChild(parent);
+    popUpTimer(parent);
+}
+
+function popUpTimer(parent) {
+    setTimeout( () => {
+        parent.remove();
+    }, 5000);
 }
 
 function navigateToLeaderboard(event) {
