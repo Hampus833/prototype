@@ -15,7 +15,6 @@ window.addEventListener("popstate", (event) => {
 //should probably be moved from state
 window.addEventListener("click", (event) => {
     const target = event.target;
-    console.log(event.target);
     if (target == document.getElementById("badges")) {
         return;
     }

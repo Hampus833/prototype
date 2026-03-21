@@ -1,8 +1,8 @@
 renderHeader(document.querySelector("body"));
-// renderStart();
+renderStart();
 // renderCodePage();
 // renderLeaderboard();
 // renderQuiz();
-renderLevelUp();
+// renderLevelUp();
 renderFooter();
 history.replaceState({page: "start"}, "", location.pathname);
