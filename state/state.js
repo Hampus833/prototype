@@ -12,6 +12,27 @@ window.addEventListener("popstate", (event) => {
     }
 });
 
+//should probably be moved from state
+window.addEventListener("click", (event) => {
+    const target = event.target;
+    console.log(event.target);
+    if (target == document.getElementById("badges")) {
+        return;
+    }
+
+    if (target.classList.contains("collection-badge")) {
+        return;
+    }
+
+    if (target == document.getElementById("badges-container")) {
+        return;
+    }
+    
+    if (document.getElementById("badge-popup")) {
+        document.getElementById("badge-popup").remove();
+    }
+});
+
 function renderPage(state) {
     //if url = leaderboard and leaberboard is clicked again it should go back to previous page
     //fix somehow
@@ -118,5 +139,86 @@ const quizQuestions = [{
     question: 1,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 0
+},
+];
+
+//badges should probably be svgs
+//add url to svg for each badge
+//should be greyed out if not unlocked or something like that
+//maybe hover function to see unlock requirement
+const badges = [{
+    id: 1,
+    description: "placeholder",
+    unlocked: false,
+}, 
+{
+    id: 2,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 3,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 4,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 5,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 6,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 7,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 8,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 9,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 10,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 12,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 13,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 14,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 15,
+    description: "placeholder",
+    unlocked: false,
+},
+{
+    id: 16,
+    description: "placeholder",
+    unlocked: false,
 },
 ]

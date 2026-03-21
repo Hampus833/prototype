@@ -13,7 +13,9 @@ function renderHeader(parent) {
     `;
     console.log("hej")
     header.querySelector("#leaderboard").addEventListener("click", navigateToLeaderboard);
-    newBadgePopUp();
+    header.querySelector("#badges").addEventListener("click", toggleBadgeCollection);
+    // newBadgePopUp();
+    // badgeCollection();
 }
 
 function newBadgePopUp() {
@@ -21,7 +23,7 @@ function newBadgePopUp() {
     const parent = document.createElement("div")
     parent.setAttribute("id", "new-badge-popup");
     parent.innerHTML = `
-    <div id="triangle"></div>
+    <div class="triangle"></div>
     <div id="new-badge-info-content">
         <p>New badge unlocked!</p>
         <div class="badge">
@@ -33,6 +35,44 @@ function newBadgePopUp() {
     popUpTimer(parent);
 }
 
+function badgeCollection(event) {
+    //badges should probably be svgs, only template for now
+    //url in badges object
+    const parent = document.createElement("div");
+    parent.setAttribute("id", "badge-popup");
+    parent.innerHTML = `
+    <div class="triangle"></div>
+    <div id="grid-container"></div>
+    `;
+
+    const badgeContainer = document.createElement("div");
+    badgeContainer.setAttribute("id", "badges-container");
+    parent.querySelector("#grid-container").appendChild(badgeContainer);
+
+    for (let b of badges) {
+        const badge = document.createElement("div");
+        badge.classList.add("collection-badge");
+        badge.setAttribute("id", b.id);
+        badgeContainer.appendChild(badge);
+    }
+    document.getElementById("wrapper").appendChild(parent);
+}
+
+function toggleBadgeCollection() {
+    if (!document.getElementById("badge-popup")) {
+        console.log("hej")
+        badgeCollection();
+    } else {
+        document.getElementById("badge-popup").remove();
+    }
+}
+
+// function hideBadgeCollection(event) {
+//     event.preventDefault();
+//     if (document.getElementById("badge-popup")) {
+//         document.getElementById("badge-popup").remove();
+//     }
+// }
 function popUpTimer(parent) {
     setTimeout( () => {
         parent.remove();
