@@ -14,6 +14,8 @@ function renderQuiz() {
 
     const answers = document.getElementById("answers");
     renderAnswers(answers);
+    inactiveContinue();
+    alreadyAnswered();
 }
 
 function renderAnswers(parent) {
@@ -39,21 +41,35 @@ function correctAnswer(event) {
     
     const clickedId = event.target.id;
     const clickedButton = event.target;
-    if (parseInt(clickedId) === currentQuestion().correctAnswer) {
+    checkCorrectAnswer(clickedButton, clickedId);
+/*     if (parseInt(clickedId) === currentQuestion().correctAnswer) {
         clickedButton.style.border = "3px solid #65B67E";
     } else {
         clickedButton.style.border = "3px solid #B66574";
-    }
+    } */
 
+    currentQuestion().answered = true;
+    currentQuestion().buttonPressed = clickedButton.id;
     inactiveButtons(clickedButton);
     activeContinue();
 }
 
+function checkCorrectAnswer(btn, btnId) {
+    if (parseInt(btnId) === currentQuestion().correctAnswer) {
+        btn.style.border = "3px solid #65B67E";
+    } else {
+        btn.style.border = "3px solid #B66574";
+    }
+
+}
+
 function inactiveButtons(button) {
     const buttons = document.querySelector("#answers").querySelectorAll("button");
+    console.log(button);
     for (let b of buttons) {
         b.disabled = true;
-        if (b !== button) {
+        if (b.id !== button.id) {
+            console.log(b);
             b.classList.add("answered");   
         }
     }
@@ -64,6 +80,17 @@ function currentQuestion() {
         if (appState.question === q.question) {
             return q;
         }
+    }
+}
+
+function alreadyAnswered() {
+    const question = currentQuestion();
+    const btn = document.getElementById(question.buttonPressed);
+    if (question.answered) {
+        inactiveButtons(btn);
+        checkCorrectAnswer(btn, btn.id);
+        activeContinue();
+        btn.classList.remove("answered");
     }
 }
 

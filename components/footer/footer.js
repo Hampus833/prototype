@@ -9,7 +9,8 @@ function renderFooter() {
     //     document.getElementById("continue").style.visibility = "hidden";
     // }
     showContinue();
-    inactiveContinue();
+    //for testing
+    //inactiveContinue();
 }
 
 function showContinue() {
@@ -24,8 +25,10 @@ function showContinue() {
 }
 
 function inactiveContinue() {
+    console.log("insideInactive")
     if (quizPage) {
         const con = document.querySelector("#continue")
+        console.log("now continue should be inactive");
         con.disabled = true;
         con.classList.add("answered");
     }
