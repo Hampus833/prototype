@@ -73,12 +73,13 @@ function toggleBadgeCollection() {
 //         document.getElementById("badge-popup").remove();
 //     }
 // }
-function popUpTimer(parent) {
+
+/* function popUpTimer(parent) {
     setTimeout( () => {
         parent.remove();
     }, 5000);
 }
-
+ */
 function navigateToLeaderboard(event) {
     event.preventDefault();
 

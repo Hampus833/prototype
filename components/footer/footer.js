@@ -39,3 +39,13 @@ function activeContinue() {
         con.disabled = false;
         con.classList.remove("answered");
 }
+
+function showAcquiredPoints(points) {
+    const wrapper = document.getElementById("wrapper");
+    const p = document.createElement("p");
+    p.setAttribute("id", "points-popup");
+    p.textContent = "+" + points;
+    
+    wrapper.appendChild(p);
+    popUpTimer(p);
+}

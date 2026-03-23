@@ -42,11 +42,6 @@ function correctAnswer(event) {
     const clickedId = event.target.id;
     const clickedButton = event.target;
     checkCorrectAnswer(clickedButton, clickedId);
-/*     if (parseInt(clickedId) === currentQuestion().correctAnswer) {
-        clickedButton.style.border = "3px solid #65B67E";
-    } else {
-        clickedButton.style.border = "3px solid #B66574";
-    } */
 
     currentQuestion().answered = true;
     currentQuestion().buttonPressed = clickedButton.id;
@@ -55,8 +50,12 @@ function correctAnswer(event) {
 }
 
 function checkCorrectAnswer(btn, btnId) {
-    if (parseInt(btnId) === currentQuestion().correctAnswer) {
+    const question = currentQuestion();
+    if (parseInt(btnId) === question.correctAnswer) {
         btn.style.border = "3px solid #65B67E";
+        if (!question.answered) {
+            addPlayerPoints();
+        }
     } else {
         btn.style.border = "3px solid #B66574";
     }
@@ -71,14 +70,6 @@ function inactiveButtons(button) {
         if (b.id !== button.id) {
             console.log(b);
             b.classList.add("answered");   
-        }
-    }
-}
-
-function currentQuestion() {
-    for (q of quizQuestions) {
-        if (appState.question === q.question) {
-            return q;
         }
     }
 }

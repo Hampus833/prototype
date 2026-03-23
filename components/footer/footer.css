@@ -14,3 +14,10 @@ footer {
 footer p {
     color: var(--points-color);
 }
+
+#points-popup {
+    font-size: 12px;
+    position: absolute;
+    bottom: 36px;
+    left: 125px;
+}

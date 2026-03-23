@@ -74,6 +74,7 @@ const quizQuestions = [{
     correctAnswer: 1,
     answered: false,
     buttonPressed: 0,
+    points: 100,
 },
 ];
 
