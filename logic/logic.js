@@ -2,6 +2,7 @@ function addPlayerPoints() {
     const question = currentQuestion();
     appState.points = appState.points + question.points; 
     showAcquiredPoints(question.points);
+    updatePoints();
 }
 
 function currentQuestion() {

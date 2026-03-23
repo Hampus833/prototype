@@ -49,3 +49,7 @@ function showAcquiredPoints(points) {
     wrapper.appendChild(p);
     popUpTimer(p);
 }
+
+function updatePoints() {
+    document.getElementById("points").textContent = `${appState.points} Points`;
+}
