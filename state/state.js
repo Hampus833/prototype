@@ -6,6 +6,7 @@ let appState = {
 }
 
 let quizPage = false;
+
 window.addEventListener("popstate", (event) => {
     if (event.state) {
         renderPage(event.state);

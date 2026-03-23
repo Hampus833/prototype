@@ -9,6 +9,7 @@ function renderFooter() {
     //     document.getElementById("continue").style.visibility = "hidden";
     // }
     showContinue();
+    inactiveContinue();
 }
 
 function showContinue() {
@@ -23,5 +24,15 @@ function showContinue() {
 }
 
 function inactiveContinue() {
-    
+    if (quizPage) {
+        const con = document.querySelector("#continue")
+        con.disabled = true;
+        con.classList.add("answered");
+    }
+}
+
+function activeContinue() {
+        const con = document.querySelector("#continue")
+        con.disabled = false;
+        con.classList.remove("answered");
 }

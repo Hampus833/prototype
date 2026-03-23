@@ -14,7 +14,6 @@ function renderQuiz() {
 
     const answers = document.getElementById("answers");
     renderAnswers(answers);
-
 }
 
 function renderAnswers(parent) {
@@ -47,16 +46,16 @@ function correctAnswer(event) {
     }
 
     inactiveButtons(clickedButton);
+    activeContinue();
 }
 
 function inactiveButtons(button) {
     const buttons = document.querySelector("#answers").querySelectorAll("button");
-    
     for (let b of buttons) {
         b.disabled = true;
-        b.classList.add("answered");
-        b.style.cursor = "auto";
-    
+        if (b !== button) {
+            b.classList.add("answered");   
+        }
     }
 }
 

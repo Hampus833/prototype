@@ -35,6 +35,8 @@
     border-radius: 4px;
 }
 
-.answered {
+button.answered {
     background-color: var(--hover-color);
+    cursor: auto;
+    opacity: 0.5;
 }
