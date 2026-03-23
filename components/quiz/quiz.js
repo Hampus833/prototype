@@ -14,6 +14,7 @@ function renderQuiz() {
 
     const answers = document.getElementById("answers");
     renderAnswers(answers);
+
 }
 
 function renderAnswers(parent) {
@@ -25,7 +26,7 @@ function renderAnswers(parent) {
                 button.textContent = a;
                 button.setAttribute("id", counter);
                 parent.appendChild(button);
-
+                button.addEventListener("click", correctAnswer);
                 counter++
             }
             counter = 0;
@@ -33,3 +34,37 @@ function renderAnswers(parent) {
         }
     }
 }
+
+function correctAnswer(event) {
+    event.preventDefault();
+    
+    const clickedId = event.target.id;
+    const clickedButton = event.target;
+    if (parseInt(clickedId) === currentQuestion().correctAnswer) {
+        clickedButton.style.border = "3px solid #65B67E";
+    } else {
+        clickedButton.style.border = "3px solid #B66574";
+    }
+
+    inactiveButtons(clickedButton);
+}
+
+function inactiveButtons(button) {
+    const buttons = document.querySelector("#answers").querySelectorAll("button");
+    
+    for (let b of buttons) {
+        b.disabled = true;
+        b.classList.add("answered");
+        b.style.cursor = "auto";
+    
+    }
+}
+
+function currentQuestion() {
+    for (q of quizQuestions) {
+        if (appState.question === q.question) {
+            return q;
+        }
+    }
+}
+

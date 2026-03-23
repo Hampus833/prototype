@@ -7,6 +7,8 @@
     --hover-color: #5a4a81;
     --codebox-color:#0C101F;
     --popup-color: #2C3557;
+    --correct-answer: #65B67E;
+    --wrong-answer: #B66574;
     --body-text: 16px;
     --heading-text: 32px;
 }

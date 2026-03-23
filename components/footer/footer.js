@@ -21,3 +21,7 @@ function showContinue() {
         console.log("now continue button should be visible");
     }
 }
+
+function inactiveContinue() {
+    
+}
