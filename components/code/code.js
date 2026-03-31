@@ -14,4 +14,11 @@ function renderCodePage() {
         </div>
     </div>
     `;
+
+    document.getElementById("reload").addEventListener("click", removeText());
+}
+
+function removeText(event) {
+    const codeArea = document.getElementById("code-area");
+    codeArea.textContent = "";
 }
