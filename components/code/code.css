@@ -49,3 +49,7 @@ textarea {
     height: 22px;
     width: 22px;
 }
+
+#reload:hover {
+    cursor: pointer;
+}

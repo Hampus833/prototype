@@ -4,10 +4,10 @@
 //
 
 renderHeader(document.querySelector("body"));
-renderStart();
-/* renderQuiz(); */
+// renderStart();
+// renderQuiz();
 renderFooter();
-// renderCodePage();
+renderCodePage();
 // renderLeaderboard();
 // renderLevelUp();
 history.replaceState({page: "start"}, "", location.pathname);
