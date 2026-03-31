@@ -36,7 +36,7 @@ window.addEventListener("click", (event) => {
 function renderPage(state) {
     //if url = leaderboard and leaberboard is clicked again it should go back to previous page
     //fix somehow
-    //you return to startPage no matter what page you were on after clicking back button on leaderboard, fix
+
     const main = document.querySelector("main");
     main.innerHTML = "";
     

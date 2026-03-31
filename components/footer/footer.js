@@ -9,6 +9,7 @@ function renderFooter() {
     //     document.getElementById("continue").style.visibility = "hidden";
     // }
     showContinue();
+    document.getElementById("continue").addEventListener("click", nextQuestion)
     //for testing
     //inactiveContinue();
 }
@@ -53,3 +54,17 @@ function showAcquiredPoints(points) {
 function updatePoints() {
     document.getElementById("points").textContent = `${appState.points} Points`;
 }
+
+function nextQuestion(event) {
+    console.log("now render next question");
+    appState.question = appState.question + 1;
+    const q = currentQuestion();
+
+    if (q.type === "quiz") {
+        renderQuiz();
+    } else if (q.type === "code") {
+        renderCodePage();
+    }
+    // navigate("/quiz", {page: "quiz"});
+}
+

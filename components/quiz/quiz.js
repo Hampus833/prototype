@@ -1,12 +1,12 @@
 function renderQuiz() {
     //check what question the user is on and render accordingly
+    const questionInfo = currentQuestion();
     quizPage = true;
     const parent = document.querySelector("main");
     parent.innerHTML = `
     <div id="quiz-content">
-        <h2>Stage 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur  
-        semper sapien vitae arcu elementum, eget sagittis mi pellentesque.</p>
+        <h2>Stage ${questionInfo.question}</h2>
+        <p>${questionInfo.description}</p>
         <div id="answers">
         </div>
     </div>
@@ -84,4 +84,6 @@ function alreadyAnswered() {
         btn.classList.remove("answered");
     }
 }
+
+
 

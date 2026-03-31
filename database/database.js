@@ -68,13 +68,37 @@ const leaderboardPlayers = [
     },
 ];
 
-const quizQuestions = [{
+const quizQuestions = [
+{
     question: 1,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Curabitur semper sapien vitae arcu elementum, eget sagittis mi pellentesque.`,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 1,
     answered: false,
     buttonPressed: 0,
     points: 100,
+    type: "quiz"
+},
+{
+    question: 2,
+    description: `This is the second question`,
+    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    correctAnswer: 3,
+    answered: false,
+    buttonPressed: 0,
+    points: 100,
+    type: "quiz"
+},
+{
+    question: 3,
+    description: `This is the third question`,
+    answers: [],
+    correctAnswer: "correct answer",
+    answered: false,
+    buttonPressed: 0,
+    points: 100,
+    type: "code"
 },
 ];
 

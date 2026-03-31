@@ -30,6 +30,8 @@ function renderLeaderboard() {
 }
 
 function calculatePlayerPos() {
+    //Spelarens resultat finns kvar även fast de flyttat upp i leaderboarden
+    //när man fått 200 poäng är man på både 11 och 10 plats en med 100 och en med 200
     const playerPoints = appState.points;
     if (playerPoints === 0) {
         leaderboardPlayers[10].name = appState.nickname;

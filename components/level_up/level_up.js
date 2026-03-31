@@ -1,4 +1,5 @@
 function renderLevelUp() {
+    //text shouldnt be hardcoded needs to update dynamically. Take content from appState
     quizPage = true;
     
     const parent = document.querySelector("main");

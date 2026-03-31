@@ -16,5 +16,5 @@ function currentQuestion() {
 function popUpTimer(parent) {
     setTimeout( () => {
         parent.remove();
-    }, 5000);
+    }, 3000);
 }
