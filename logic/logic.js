@@ -13,6 +13,13 @@ function currentQuestion() {
     }
 }
 
+function checkStrings(userString, checkString) {
+    if (userString == checkString) {
+        return true;
+    } else {
+        return false;
+    }
+}
 function popUpTimer(parent) {
     setTimeout( () => {
         parent.remove();

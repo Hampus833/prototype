@@ -6,7 +6,12 @@
     width: 610px;
 }
 
-#code-content p{
+/* #code-content {
+    margin-top: 0px;
+    margin-bottom: 32px;
+} */
+
+#code-description {
     margin-top: 0px;
     margin-bottom: 32px;
 }
@@ -20,20 +25,25 @@ textarea {
     width: 100%;
     height: 295px;
     border-radius: 8px 8px 0 0;
+
     background-color: var(--codebox-color);
     border: none;
     color: var(--text-color);
     font-family: monospace;
+
     margin-bottom: 4px;
     padding-top: 8px;
     padding-right: 12px;
     padding-left: 12px;
+    resize: none;
 }
 
 #reload-container {
+    border-top: none;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+    
     padding-right: 4px;
     height: 35px;
     width: 100%;
@@ -53,3 +63,24 @@ textarea {
 #reload:hover {
     cursor: pointer;
 }
+
+ #run-code {
+    margin: 0;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+#run-code:hover {
+    cursor: pointer;
+}
+
+.answered-correct {
+    border-color: 3px solid var(--correct-answer);
+    color: var(--correct-answer);
+}
+
+.answered-incorrectly {
+    border: 3px solid var(--wrong-answer);
+    color: var(--wrong-answer);
+}
+

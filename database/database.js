@@ -94,7 +94,7 @@ const quizQuestions = [
     question: 3,
     description: `This is the third question`,
     answers: [],
-    correctAnswer: "correct answer",
+    correctAnswer: "function test() {let test = true}",
     answered: false,
     buttonPressed: 0,
     points: 100,
