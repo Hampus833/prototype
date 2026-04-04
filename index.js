@@ -8,8 +8,8 @@
 renderHeader(document.querySelector("body"));
 // renderStart();
 renderFooter();
-renderQuiz();
-// renderCodePage();
+// renderQuiz();
+renderCodePage();
 // renderLeaderboard();
 // renderLevelUp();
 history.replaceState({page: "start"}, "", location.pathname);
