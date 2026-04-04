@@ -96,7 +96,7 @@ const quizQuestions = [
 },
 {
     question: 4,
-    description: `This is the second question`,
+    description: `This is the fourth question`,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 3,
     answered: false,
@@ -106,7 +106,7 @@ const quizQuestions = [
 },
 {
     question: 5,
-    description: `This is the third question`,
+    description: `This is the fifth question`,
     answers: [],
     correctAnswer: "function test() {let test = true}",
     answered: false,
