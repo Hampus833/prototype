@@ -16,6 +16,7 @@ function renderHeader(parent) {
     header.querySelector("#badges").addEventListener("click", toggleBadgeCollection);
     // newBadgePopUp();
     // badgeCollection();
+    document.getElementById("header-right").style.visibility = "hidden";
 }
 
 function newBadgePopUp() {
@@ -36,8 +37,6 @@ function newBadgePopUp() {
 }
 
 function badgeCollection(event) {
-    //badges should probably be svgs, only template for now
-    //url in badges object
     const parent = document.createElement("div");
     parent.setAttribute("id", "badge-popup");
     parent.innerHTML = `
@@ -48,10 +47,6 @@ function badgeCollection(event) {
     const badgeContainer = document.createElement("div");
     badgeContainer.setAttribute("id", "badges-container");
     parent.querySelector("#grid-container").appendChild(badgeContainer);
-
-    //kolla ifall badgen är upplåst
-    //beroende på om den är det eller inte visa rätt bild
-    //upplåsta badges ska visas först
 
     const orderedBadges = orderBadges();
     for (let b of orderedBadges) {
@@ -113,4 +108,8 @@ function setNickname(nickname, input) {
         alert("Nickname can't be empty");
         return false;
     }
+}
+
+function showUserInfo() {
+    document.getElementById("header-right").style.visibility = "visible";
 }

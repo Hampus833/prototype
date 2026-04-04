@@ -3,13 +3,14 @@
 //skriva korrekt descirptions för alla badges, och hur de låses upp.
 //fixa så badges låses upp vid korrekta tidpunkter
 //växla mellan frågorna
-//level, nickname och avatar ska inte finnas förrän man klickat på start
+//om quizzet redan är startat och man trycker back 
+//ska man inte behöva skriva in sitt namn igen och på så sätt skapa en ny användare
 
 renderHeader(document.querySelector("body"));
-// renderStart();
+renderStart();
 renderFooter();
 // renderQuiz();
-renderCodePage();
+// renderCodePage();
 // renderLeaderboard();
 // renderLevelUp();
 history.replaceState({page: "start"}, "", location.pathname);
