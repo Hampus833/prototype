@@ -25,3 +25,10 @@ function popUpTimer(parent) {
         parent.remove();
     }, 3000);
 }
+
+function orderBadges() {
+    const orderedBadges = badges
+    .filter(b => b.achieved)
+    .concat(badges.filter(b => !b.achieved));
+    return orderedBadges;
+}

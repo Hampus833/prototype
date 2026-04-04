@@ -49,14 +49,29 @@ function badgeCollection(event) {
     badgeContainer.setAttribute("id", "badges-container");
     parent.querySelector("#grid-container").appendChild(badgeContainer);
 
-    for (let b of badges) {
+    //kolla ifall badgen är upplåst
+    //beroende på om den är det eller inte visa rätt bild
+    //upplåsta badges ska visas först
+
+    const orderedBadges = orderBadges();
+    for (let b of orderedBadges) {
         const badge = document.createElement("div");
         badge.classList.add("collection-badge");
         badge.setAttribute("id", b.id);
         badgeContainer.appendChild(badge);
+
+        if (b.achieved) {
+            badge.title = b.description;
+            badge.style.backgroundImage = `url(${b.unlocked})`
+        } else {
+            badge.title = b.unlockInstructions;
+            badge.style.backgroundImage = `url(${b.locked})`;
+        }
     }
     document.getElementById("wrapper").appendChild(parent);
 }
+
+
 
 function toggleBadgeCollection() {
     if (!document.getElementById("badge-popup")) {

@@ -1,8 +1,8 @@
 //todo
-//fixa tillbaka css så att contentet ligger i mitten av skärmen
-//designa och fixa badges så de är svgs i koden
+//fixa tillbaka css så att contentet ligger närmre mitten av skärmen
 //bestämma när användaren ska levla up och relevant kod för det
 //Fixa buggen i leaderboard 
+//skriva korrekt descirptions för alla badges, och hur de låses upp.
 
 renderHeader(document.querySelector("body"));
 // renderStart();
