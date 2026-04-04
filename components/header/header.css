@@ -22,8 +22,11 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: hotpink;
+/*     background-color: hotpink; */
     margin-left: 8px;
+    background-image: url(../../images/avatar.svg);
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .clickable {
