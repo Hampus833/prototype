@@ -28,6 +28,7 @@ function startQuiz(event) {
         //eventually all quiz questions get unique url
             showUserInfo();
             addPlayerToLeaderboard();
+            unlockBadge(8);
             navigate("/quiz", {page: "quiz"});
             // showContinue();
     }

@@ -118,8 +118,8 @@ const quizQuestions = [
 
 const badges = [{
     id: 1,
-    description: "placeholder",
-    unlockInstructions: "how to unlock",
+    description: "Reached first place on the leaderboard",
+    unlockInstructions: "Unlock by reaching first place on the leaderboard",
     locked: "../images/badges/locked/1st-leaderboard-badge-locked.svg",
     unlocked: "../images/badges/unlocked/1st-leaderboard-unlocked.svg",
     achieved: false,
@@ -127,7 +127,7 @@ const badges = [{
 {
     id: 2,
     description: "placeholder",
-    unlockInstructions: "how to unlock",
+    unlockInstructions: "Unlock by reaching second place on the leaderboard",
     locked: "../images/badges/locked/2nd-leaderboard-badge-locked.svg",
     unlocked: "../images/badges/unlocked/2nd-leaderboard-unlocked.svg",
     achieved: false,

@@ -19,19 +19,22 @@ function renderHeader(parent) {
     document.getElementById("header-right").style.visibility = "hidden";
 }
 
-function newBadgePopUp() {
-    //badges should probably be svgs, only template for now
+function newBadgePopUp(badge) {
     const parent = document.createElement("div")
     parent.setAttribute("id", "new-badge-popup");
     parent.innerHTML = `
     <div class="triangle"></div>
     <div id="new-badge-info-content">
         <p>New badge unlocked!</p>
-        <div class="badge">
-            <p>2</p>
-        </div>
     </div>
     `;
+
+    const unlockedBadge = document.createElement("div");
+    unlockedBadge.classList.add("badge");
+    unlockedBadge.title = badge.description;
+    unlockedBadge.style.backgroundImage = `url(${badge.unlocked})`;
+
+    parent.querySelector("#new-badge-info-content").appendChild(unlockedBadge);
     document.querySelector("#wrapper").appendChild(parent);
     popUpTimer(parent);
 }
@@ -77,19 +80,6 @@ function toggleBadgeCollection() {
     }
 }
 
-// function hideBadgeCollection(event) {
-//     event.preventDefault();
-//     if (document.getElementById("badge-popup")) {
-//         document.getElementById("badge-popup").remove();
-//     }
-// }
-
-/* function popUpTimer(parent) {
-    setTimeout( () => {
-        parent.remove();
-    }, 5000);
-}
- */
 function navigateToLeaderboard(event) {
     event.preventDefault();
 

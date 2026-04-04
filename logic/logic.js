@@ -58,3 +58,11 @@ function updateLeaderboard() {
         }
     }
 }
+
+function unlockBadge(badgeId) {
+    let unlockedBadge = badges.find(x => x.id === badgeId);
+    if (!unlockedBadge.achieved) {
+        unlockedBadge.achieved = true;
+        newBadgePopUp(unlockedBadge);
+    }
+}

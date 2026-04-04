@@ -54,9 +54,11 @@ function checkCorrectAnswer(btn, btnId) {
     if (parseInt(btnId) === question.correctAnswer) {
         btn.style.border = "3px solid #65B67E";
         if (!question.answered) {
+            unlockBadge(5);
             addPlayerPoints();
         }
     } else {
+        unlockBadge(6);
         btn.style.border = "3px solid #B66574";
     }
 
