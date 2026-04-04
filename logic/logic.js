@@ -32,3 +32,7 @@ function orderBadges() {
     .concat(badges.filter(b => !b.achieved));
     return orderedBadges;
 }
+
+function addPlayerToLeaderboard() {
+    
+}

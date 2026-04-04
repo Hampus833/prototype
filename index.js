@@ -4,6 +4,7 @@
 //Fixa buggen i leaderboard 
 //skriva korrekt descirptions för alla badges, och hur de låses upp.
 //fixa så badges låses upp vid korrekta tidpunkter
+//fixa en default avatar och inte bara en rosa cirkel som det är nu
 
 renderHeader(document.querySelector("body"));
 // renderStart();

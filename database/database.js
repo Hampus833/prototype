@@ -61,6 +61,7 @@ const leaderboardPlayers = [
         points: 100
     },
     {
+        id: 1,
         position: 11,
         name: "PlayerStart",
         level: 0,
