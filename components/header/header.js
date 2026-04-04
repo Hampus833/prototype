@@ -20,6 +20,11 @@ function renderHeader(parent) {
 }
 
 function newBadgePopUp(badge) {
+    const unlockedBadge = document.createElement("div");
+    unlockedBadge.classList.add("badge");
+    unlockedBadge.title = badge.description;
+    unlockedBadge.style.backgroundImage = `url(${badge.unlocked})`;
+
     const parent = document.createElement("div")
     parent.setAttribute("id", "new-badge-popup");
     parent.innerHTML = `
@@ -28,11 +33,6 @@ function newBadgePopUp(badge) {
         <p>New badge unlocked!</p>
     </div>
     `;
-
-    const unlockedBadge = document.createElement("div");
-    unlockedBadge.classList.add("badge");
-    unlockedBadge.title = badge.description;
-    unlockedBadge.style.backgroundImage = `url(${badge.unlocked})`;
 
     parent.querySelector("#new-badge-info-content").appendChild(unlockedBadge);
     document.querySelector("#wrapper").appendChild(parent);

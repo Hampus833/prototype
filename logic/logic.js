@@ -23,7 +23,7 @@ function checkStrings(userString, checkString) {
 function popUpTimer(parent) {
     setTimeout( () => {
         parent.remove();
-    }, 3000);
+    }, 2000);
 }
 
 function orderBadges() {
