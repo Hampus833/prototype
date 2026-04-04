@@ -7,10 +7,10 @@
 //fixa en default avatar och inte bara en rosa cirkel som det är nu
 
 renderHeader(document.querySelector("body"));
-// renderStart();
+renderStart();
 // renderQuiz();
 renderFooter();
-renderCodePage();
+// renderCodePage();
 // renderLeaderboard();
 // renderLevelUp();
 history.replaceState({page: "start"}, "", location.pathname);

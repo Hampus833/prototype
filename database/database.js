@@ -60,13 +60,6 @@ const leaderboardPlayers = [
         level: 10,
         points: 100
     },
-    {
-        id: 1,
-        position: 11,
-        name: "PlayerStart",
-        level: 0,
-        points: 0,
-    },
 ];
 
 const quizQuestions = [

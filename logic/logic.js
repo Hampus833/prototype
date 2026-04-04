@@ -34,5 +34,27 @@ function orderBadges() {
 }
 
 function addPlayerToLeaderboard() {
-    
+    const user = {
+        id: 1,
+        position: leaderboardPlayers.length + 1,
+        name: appState.nickname,
+        level: appState.level,
+        points: appState.points
+    }
+
+    leaderboardPlayers.push(user);
+}
+
+function updateLeaderboard() {
+    const sorted = leaderboardPlayers.sort((a, b) => b.points - a.points);
+    let flag = false;
+    for (let i = 0; i < sorted.length; i++) {
+        if (sorted[i].id === 1) {
+            flag = true;
+            sorted[i].position = i + 1;
+        }
+        if (flag) {
+            sorted[i].position = i + 1;
+        }
+    }
 }

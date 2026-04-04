@@ -26,6 +26,7 @@ function startQuiz(event) {
     const nickname = input.value;
     if (setNickname(nickname, input)) {
             //eventually all quiz questions get unique url
+            addPlayerToLeaderboard();
             navigate("/quiz", {page: "quiz"});
             // showContinue();
     }
