@@ -94,6 +94,26 @@ const quizQuestions = [
     points: 100,
     type: "code"
 },
+{
+    question: 4,
+    description: `This is the second question`,
+    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    correctAnswer: 3,
+    answered: false,
+    buttonPressed: 0,
+    points: 100,
+    type: "quiz"
+},
+{
+    question: 5,
+    description: `This is the third question`,
+    answers: [],
+    correctAnswer: "function test() {let test = true}",
+    answered: false,
+    buttonPressed: 0,
+    points: 100,
+    type: "code"
+},
 ];
 
 const badges = [{
