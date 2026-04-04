@@ -3,6 +3,7 @@
 //bestämma när användaren ska levla up och relevant kod för det
 //skriva korrekt descirptions för alla badges, och hur de låses upp.
 //fixa så badges låses upp vid korrekta tidpunkter
+//växla mellan frågorna
 
 renderHeader(document.querySelector("body"));
 // renderStart();
