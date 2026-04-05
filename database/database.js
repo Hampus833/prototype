@@ -189,6 +189,7 @@ const badges = [{
 {
     id: 9,
     description: "Reached level 2",
+    level: 2,
     unlockInstructions: "Unlock by reaching level 2",
     locked: "../images/badges/locked/level-2-badge-locked.svg",
     unlocked: "../images/badges/unlocked/level-2-badge-unlocked.svg",
@@ -197,6 +198,7 @@ const badges = [{
 {
     id: 10,
     description: "Reached level 3",
+    level: 3,
     unlockInstructions: "Unlock by reaching level 3",
     locked: "../images/badges/locked/level-3-badge-locked.svg",
     unlocked: "../images/badges/unlocked/level-3-badge-unlocked.svg",
@@ -205,6 +207,7 @@ const badges = [{
 {
     id: 12,
     description: "pReached level 4",
+    level: 4,
     unlockInstructions: "Unlock by reaching level 4",
     locked: "../images/badges/locked/level-4-badge-locked.svg",
     unlocked: "../images/badges/unlocked/level-4-badge-unlocked.svg",
@@ -213,6 +216,7 @@ const badges = [{
 {
     id: 13,
     description: "Reached level 5",
+    level: 5,
     unlockInstructions: "Unlock by reaching level 5",
     locked: "../images/badges/locked/level-5-badge-locked.svg",
     unlocked: "../images/badges/unlocked/level-5-badge-unlocked.svg",

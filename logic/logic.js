@@ -61,8 +61,21 @@ function updateLeaderboard() {
 
 function unlockBadge(badgeId) {
     let unlockedBadge = badges.find(x => x.id === badgeId);
-    if (!unlockedBadge.achieved) {
-        unlockedBadge.achieved = true;
+    if (checkIfAchieved(unlockedBadge)) {
+        newBadgePopUp(unlockedBadge);
+    }
+}
+
+function checkIfAchieved(badge) {
+    if (!badge.achieved) {
+        badge.achieved = true;
+        return true;
+    }
+}
+
+function unlockLevelBadge(level) {
+    let unlockedBadge = badges.find(x => x.level === level);
+    if (checkIfAchieved(unlockedBadge)) {
         newBadgePopUp(unlockedBadge);
     }
 }
