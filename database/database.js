@@ -116,6 +116,12 @@ const quizQuestions = [
 },
 ];
 
+//todo
+//i level badgesen lägga till en level nyckel så att jag kan använda användarens level
+//för att hitta objektet, istället för att behöva hårdkoda med objekt id:t varje gång
+//känns som om det kommer bli lättare än att behöva hårdkoda, får se. 
+//ev en funktion som låser upp rätt badge beronde på leveln. 
+//har ju inte flera continue knappar så kommer behöva göra så för att inte låsa fast. 
 const badges = [{
     id: 1,
     description: "Reached first place on the leaderboard",
