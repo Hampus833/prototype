@@ -11,6 +11,11 @@ function updatePlayerLeaderboardPoints() {
     player.points = appState.points;
 }
 
+function updatePlayerLeaderboardLevel() {
+    let player = leaderboardPlayers.find(x => x.id === 1);
+    player.level = appState.level;
+}
+
 function currentQuestion() {
     for (q of quizQuestions) {
         if (appState.question === q.question) {
@@ -119,11 +124,14 @@ function leaderboardPositionBadges() {
 
 function updatePlayerLevel() {
     appState.level = appState.level + 1;
-    //function to update html in header
+    updatePlayerLeaderboardLevel();
+    updateLevel();
+    //need to update level
 }
 
 function showLevelUpScreen() {
     updatePlayerLevel();
+    unlockLevelBadge(appState.level);
     navigate("/level-up", {page: "level-up"});
 }
 

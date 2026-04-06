@@ -7,7 +7,7 @@ function renderHeader(parent) {
     </div>
     <div id="header-right">
         <p id="nickname">${appState.nickname}</p>
-        <p id="level">LV.1</p>
+        <p id="level">LV.<span id="span-level">${appState.level}</span></p>
         <div id="avatar"></div>
     </div>
     `;
@@ -101,4 +101,8 @@ function setNickname(nickname, input) {
 
 function showUserInfo() {
     document.getElementById("header-right").style.visibility = "visible";
+}
+
+function updateLevel() {
+    document.getElementById("span-level").textContent = appState.level;
 }

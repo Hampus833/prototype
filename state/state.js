@@ -50,7 +50,9 @@ function renderPage(state) {
     if (state.page === "leaderboard") {
         renderLeaderboard();
         quizPage = false;
+        levelUpPage = false;
         showContinue();
+        // inactiveContinue();
     }
     
     if (state.page === "quiz") {
