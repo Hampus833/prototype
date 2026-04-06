@@ -59,12 +59,12 @@ function nextQuestion(event) {
     console.log("now render next question");
     appState.question = appState.question + 1;
     const q = currentQuestion();
-
-    if (q.type === "quiz") {
-        renderQuiz();
-    } else if (q.type === "code") {
-        renderCodePage();
-    }
+    questionType();
+    // if (q.type === "quiz") {
+    //     renderQuiz();
+    // } else if (q.type === "code") {
+    //     renderCodePage();
+    // }
     // navigate("/quiz", {page: "quiz"});
 }
 

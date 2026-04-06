@@ -1,3 +1,5 @@
+let answer = "";
+
 function renderCodePage() {
     quizPage = true;
     const currQ = currentQuestion();
@@ -21,6 +23,7 @@ function renderCodePage() {
     document.getElementById("reload").addEventListener("click", removeText);
     // document.getElementById("code-area").addEventListener("keyup", typing);
     document.getElementById("run-code").addEventListener("click", checkCode);
+    checkIfCodeSubmitted();
 }
 
 function removeText(event) {
@@ -30,16 +33,6 @@ function removeText(event) {
         document.getElementById("code-area").classList.remove("answered-incorrectly");
     }
 }
-
-// function typing(event) {
-//     const text = event.target.value;
-//     if (event.key !== "Backspace") {
-//         if (text.length > 0) {
-//             activeContinue();
-//         }
-//     }
-// }
-
 function checkCode(event) {
     const textArea = document.getElementById("code-area");
     const currQ = currentQuestion()
@@ -50,6 +43,7 @@ function checkCode(event) {
     if (editedAnswer !== "") {
         const editedQuestion = currQ.correctAnswer.toLowerCase().trim().replace(/[\r\n]+/gm, '');
         const checkedAnswer = checkStrings(editedAnswer, editedQuestion);
+        answer = editedAnswer;
         
         if (checkedAnswer) {
             //svarar rätt får poäng och kan inte skriva om
@@ -57,11 +51,15 @@ function checkCode(event) {
             reloadContainer.classList.add("answered");
             activeContinue();
             addPlayerPoints();
+            currQ.answered = true;
+            // checkIfCodeSubmitted();
             event.target.removeEventListener("click", checkCode);
+            noEventListener();
         } else {
             //svarar fel kan testa skriva igen tills man får rätt
             textArea.classList.add("answered-incorrectly"); 
             activeContinue();
+            currQ.answered = true;
         }
     } else {
         textArea.value = "Answer can't be empty";
@@ -69,3 +67,32 @@ function checkCode(event) {
     }
 }
 
+//global variabel med värdet spelaren svarade
+//kolla ifall den är det rätta svaret ifall inte är det fortfarande rött när spelaren kommer tillbaka från leaderboard.
+
+function checkIfCodeSubmitted() {
+    const q = currentQuestion();
+    const textArea = document.getElementById("code-area");
+
+    if (q.answered) {
+        textArea.value = "";
+        textArea.value = answer;
+
+        console.log("User answer: " + answer);
+        if (answer == q.correctAnswer) {
+            textArea.classList.add("answered-correct");
+            noEventListener();
+        } else {
+            console.log("answered incorrectly");
+            textArea.classList.add("answered-incorrectly");
+        }
+
+        activeContinue();
+    }
+}
+
+//function to remove eventlistener of reload button if question answered correctly
+function noEventListener() {
+    document.getElementById("reload").removeEventListener("click", removeText);
+    document.getElementById("run-code").removeEventListener("click", checkCode);
+}

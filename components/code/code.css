@@ -75,7 +75,7 @@ textarea {
 }
 
 .answered-correct {
-    border-color: 3px solid var(--correct-answer);
+    border: 3px solid var(--correct-answer);
     color: var(--correct-answer);
 }
 

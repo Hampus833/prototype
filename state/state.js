@@ -54,7 +54,7 @@ function renderPage(state) {
     }
     
     if (state.page === "quiz") {
-        renderQuiz()
+        questionType();
         showContinue();
     }
     
