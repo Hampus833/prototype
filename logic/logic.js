@@ -64,6 +64,7 @@ function updateLeaderboard() {
             sorted[i].position = i + 1;
         }
     }
+    leaderboardPositionBadges();
 }
 
 function unlockBadge(badgeId) {
@@ -93,5 +94,26 @@ function questionType() {
         renderQuiz()
     } else if (q.type === "code") {
         renderCodePage();
+    }
+}
+
+function leaderboardPositionBadges() {
+    const pos = leaderboardPlayers.findIndex(x => x.id === 1);
+
+    switch (pos){
+        case 0:
+            unlockBadge(1);
+            //code to unlock badge
+            break;
+        case 1:
+            unlockBadge(2);
+            //code to unlock badge
+            break;
+        case 2:
+            unlockBadge(3);
+            //code to unlock badge
+            break;
+        default:
+            break;
     }
 }

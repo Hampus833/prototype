@@ -53,7 +53,6 @@ function checkCode(event) {
             addPlayerPoints();
             currQ.answered = true;
             // checkIfCodeSubmitted();
-            event.target.removeEventListener("click", checkCode);
             noEventListener();
         } else {
             //svarar fel kan testa skriva igen tills man får rätt
@@ -65,6 +64,7 @@ function checkCode(event) {
         textArea.value = "Answer can't be empty";
         console.log(textArea.value);
     }
+    updateLeaderboard();
 }
 
 //global variabel med värdet spelaren svarade

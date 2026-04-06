@@ -46,6 +46,7 @@ function correctAnswer(event) {
     currentQuestion().answered = true;
     currentQuestion().buttonPressed = clickedButton.id;
     inactiveButtons(clickedButton);
+    updateLeaderboard();
     activeContinue();
 }
 
