@@ -11,7 +11,7 @@ function renderHeader(parent) {
         <div id="avatar"></div>
     </div>
     `;
-    console.log("hej")
+
     header.querySelector("#leaderboard").addEventListener("click", navigateToLeaderboard);
     header.querySelector("#badges").addEventListener("click", toggleBadgeCollection);
     // newBadgePopUp();
@@ -73,7 +73,6 @@ function badgeCollection(event) {
 
 function toggleBadgeCollection() {
     if (!document.getElementById("badge-popup")) {
-        console.log("hej")
         badgeCollection();
     } else {
         document.getElementById("badge-popup").remove();

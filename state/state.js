@@ -6,6 +6,7 @@ let appState = {
 }
 
 let quizPage = false;
+let levelUpPage = false;
 
 window.addEventListener("popstate", (event) => {
     if (event.state) {
@@ -50,11 +51,15 @@ function renderPage(state) {
         renderLeaderboard();
         quizPage = false;
         showContinue();
-        console.log("Now leaderboard should render");
     }
     
     if (state.page === "quiz") {
         questionType();
+        showContinue();
+    }
+
+    if (state.page === "level-up") {
+        renderLevelUp();
         showContinue();
     }
     

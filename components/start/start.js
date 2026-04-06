@@ -33,6 +33,7 @@ function startQuiz(event) {
                 unlockBadge(8);
             }, 2500);
             navigate("/quiz", {page: "quiz"});
+
             // showContinue();
     }
 }

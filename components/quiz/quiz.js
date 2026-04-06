@@ -2,6 +2,7 @@ function renderQuiz() {
     //check what question the user is on and render accordingly
     const questionInfo = currentQuestion();
     quizPage = true;
+    levelUpPage = false;
     const parent = document.querySelector("main");
     parent.innerHTML = `
     <div id="quiz-content">
@@ -16,6 +17,7 @@ function renderQuiz() {
     renderAnswers(answers);
     inactiveContinue();
     alreadyAnswered();
+    
 }
 
 function renderAnswers(parent) {
@@ -67,11 +69,9 @@ function checkCorrectAnswer(btn, btnId) {
 
 function inactiveButtons(button) {
     const buttons = document.querySelector("#answers").querySelectorAll("button");
-    console.log(button);
     for (let b of buttons) {
         b.disabled = true;
         if (b.id !== button.id) {
-            console.log(b);
             b.classList.add("answered");   
         }
     }

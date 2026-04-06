@@ -54,7 +54,6 @@ function addPlayerToLeaderboard() {
 function updateLeaderboard() {
     const sorted = leaderboardPlayers.sort((a, b) => b.points - a.points);
     let flag = false;
-    console.log(sorted);
     for (let i = 0; i < sorted.length; i++) {
         if (sorted[i].id === 1) {
             flag = true;
@@ -117,3 +116,30 @@ function leaderboardPositionBadges() {
             break;
     }
 }
+
+function updatePlayerLevel() {
+    appState.level = appState.level + 1;
+    //function to update html in header
+}
+
+function showLevelUpScreen() {
+    updatePlayerLevel();
+    navigate("/level-up", {page: "level-up"});
+}
+
+function showQuestionScreen() {
+    updateQuestion();
+    navigate("/quiz", {page: "quiz"});
+}
+
+function updateQuestion() {
+    appState.question = appState.question + 1;
+}
+
+// function checkIfLastQuestion() {
+//     if (appState.question === quizQuestions.length) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }

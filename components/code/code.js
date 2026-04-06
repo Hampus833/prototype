@@ -2,6 +2,7 @@ let answer = "";
 
 function renderCodePage() {
     quizPage = true;
+    levelUpPage = false;
     const currQ = currentQuestion();
     const parent = document.querySelector("main");
     showContinue();
@@ -24,6 +25,7 @@ function renderCodePage() {
     // document.getElementById("code-area").addEventListener("keyup", typing);
     document.getElementById("run-code").addEventListener("click", checkCode);
     checkIfCodeSubmitted();
+    
 }
 
 function removeText(event) {
@@ -62,7 +64,6 @@ function checkCode(event) {
         }
     } else {
         textArea.value = "Answer can't be empty";
-        console.log(textArea.value);
     }
     updateLeaderboard();
 }
@@ -77,13 +78,10 @@ function checkIfCodeSubmitted() {
     if (q.answered) {
         textArea.value = "";
         textArea.value = answer;
-
-        console.log("User answer: " + answer);
         if (answer == q.correctAnswer) {
             textArea.classList.add("answered-correct");
             noEventListener();
         } else {
-            console.log("answered incorrectly");
             textArea.classList.add("answered-incorrectly");
         }
 

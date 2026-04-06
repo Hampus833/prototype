@@ -15,21 +15,16 @@ function renderFooter() {
 }
 
 function showContinue() {
-    console.log("Hej inne i showContinue");
-    if (!quizPage) {
+    if (!quizPage && !levelUpPage) {
         document.getElementById("continue").style.visibility = "hidden";
-        console.log("Now continue button should be hidden");
     } else {
         document.getElementById("continue").style.visibility = "visible";
-        console.log("now continue button should be visible");
     }
 }
 
 function inactiveContinue() {
-    console.log("insideInactive")
     if (quizPage) {
         const con = document.querySelector("#continue")
-        console.log("now continue should be inactive");
         con.disabled = true;
         con.classList.add("answered");
     }
@@ -56,15 +51,58 @@ function updatePoints() {
 }
 
 function nextQuestion(event) {
-    console.log("now render next question");
-    appState.question = appState.question + 1;
-    const q = currentQuestion();
-    questionType();
-    // if (q.type === "quiz") {
-    //     renderQuiz();
-    // } else if (q.type === "code") {
-    //     renderCodePage();
-    // }
-    // navigate("/quiz", {page: "quiz"});
+    
+    //unlock the correct badges
+    switch (appState.question) {
+        case 1:
+            if (!levelUpPage) {
+                console.log("current question: " + appState.question);
+                showLevelUpScreen();
+            } else {
+                showQuestionScreen();
+                console.log("current question: " + appState.question);
+            }
+            break;
+        case 2:
+            if (!levelUpPage) {
+                console.log("current question: " + appState.question);
+                showLevelUpScreen();
+            } else {
+                showQuestionScreen();
+                console.log("current question: " + appState.question);
+            }
+            break;
+        case 3:
+            console.log("current question: " + appState.question);
+            updateQuestion();
+            questionType();
+            break;
+        case 4:
+            if (!levelUpPage) {
+                console.log("current question: " + appState.question);
+                showLevelUpScreen();
+            } else {
+                showQuestionScreen();
+                console.log("current question: " + appState.question);
+            }
+            break;
+        case 5:
+            console.log("current question: " + appState.question);
+            updateQuestion();
+            questionType();
+            break;
+        case 6:   
+            if (!levelUpPage) {
+                console.log("current question: " + appState.question);
+                showLevelUpScreen();
+            } else {
+                showQuestionScreen();
+                console.log("current question: " + appState.question);
+            }
+            break;
+        default:
+            break;
+    }
 }
+
 
