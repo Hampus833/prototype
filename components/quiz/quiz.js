@@ -59,6 +59,7 @@ function checkCorrectAnswer(btn, btnId) {
         if (!question.answered) {
             unlockBadge(5);
             addPlayerPoints();
+            allAnswersCorrect();
         }
     } else {
         unlockBadge(6);

@@ -5,8 +5,6 @@
 //fixa slutskärm
 //fixa korrekt poäng för varje fråga
 //byta ut alla placeholders
-//om man gått bak ett steg och sen trycker continue istället för frampilen
-//fuckas hela quizzet upp måste på något sätt kolla ifall frågan redan är besvarad
 
 renderHeader(document.querySelector("body"));
 renderStart();

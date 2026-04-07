@@ -1,6 +1,6 @@
 let appState = {
     nickname: "Nickname",
-    points: 1100,
+    points: 0,
     question: 1,
     level: 1,
 }

@@ -147,13 +147,18 @@ function updateQuestion() {
 }
 
 function allAnswersCorrect() {
-
+    const maximumPoints = quizQuestions.reduce((a, b) => a + b.points, 0);
+    if (appState.points >= maximumPoints) {
+        unlockBadge(4);
+    }
+    //kolla så att alla svar är korrekt och sen låsa upp badgen
 }
 
-// function checkIfLastQuestion() {
-//     if (appState.question === quizQuestions.length) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+function allQuestionsAnswered() {
+    //kolla så att alla frågor är besvarade och visa slutskärmen
+    //leaderboarden dyker upp
+    //continue försvinner
+    //leaderboard knappen försvinner
+    //namnet i leaderboarden är highlightat
+    // istället för leaderboard står det typ resultat
+}

@@ -54,6 +54,7 @@ function checkCode(event) {
             activeContinue();
             addPlayerPoints();
             currQ.answered = true;
+            allAnswersCorrect();
             // checkIfCodeSubmitted();
             noEventListener();
         } else {
