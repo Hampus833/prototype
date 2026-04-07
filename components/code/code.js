@@ -8,16 +8,19 @@ function renderCodePage() {
     showContinue();
     inactiveContinue();
     parent.innerHTML = `
-    <div id="code-content">
-        <h2>Stage ${currQ.question}</h2>
-        <p id="code-description">${currQ.description}</p>
-        <textarea id="code-area" name="code">
-        Write your code
-        </textarea>
-        <div id="reload-container">
-            <p id="run-code">Run</p>
-            <div id="reload"></div>
-        </div>
+    <div id="flex">
+        <div id="code-content">
+            <h2>Stage ${currQ.question}</h2>
+            <p id="code-description">${currQ.description}</p>
+            <textarea id="code-area" name="code">
+            Write your code
+            </textarea>
+            <div id="reload-container">
+                <p id="run-code">Run</p>
+                <div id="reload"></div>
+            </div>
+            </div>
+        <div id="user-code-area"></div>
     </div>
     `;
 
@@ -57,6 +60,7 @@ function checkCode(event) {
             allAnswersCorrect();
             // checkIfCodeSubmitted();
             noEventListener();
+            runCode(editedAnswer);
         } else {
             //svarar fel kan testa skriva igen tills man får rätt
             textArea.classList.add("answered-incorrectly"); 
@@ -94,4 +98,12 @@ function checkIfCodeSubmitted() {
 function noEventListener() {
     document.getElementById("reload").removeEventListener("click", removeText);
     document.getElementById("run-code").removeEventListener("click", checkCode);
+}
+
+function runCode(code) {
+    const codeArea = document.getElementById("user-code-area");
+    codeArea.innerHTML = code;
+    const child = codeArea.firstChild;
+    child.setAttribute("id", "user-code");
+    console.log(codeArea.firstChild);
 }

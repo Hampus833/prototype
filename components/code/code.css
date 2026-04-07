@@ -1,3 +1,10 @@
+#flex {
+    display: flex;
+    gap: 16px;
+    align-items: end;
+    justify-content: center;
+}
+
 #code-content {
     display: flex;
     flex-direction: column;
@@ -84,3 +91,15 @@ textarea {
     color: var(--wrong-answer);
 }
 
+
+#user-code-area {
+    background-color: white;
+    width: 295px;
+    height: 336px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#user-code {
+    all: revert;
+}

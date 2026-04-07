@@ -107,7 +107,7 @@ const quizQuestions = [
     question: 3,
     description: `This is the third question`,
     answers: [],
-    correctAnswer: "1",
+    correctAnswer: "<button>test</button>",
     answered: false,
     buttonPressed: 0,
     points: 200,
