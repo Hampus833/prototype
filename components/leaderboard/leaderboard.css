@@ -53,6 +53,10 @@
     margin: 0;
 }
 
+.player #leaderboard-player {
+    color: #8BCFE9;
+}
+
 #leaderboard-pos {
     flex-basis: 45px;
 }

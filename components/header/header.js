@@ -106,3 +106,7 @@ function showUserInfo() {
 function updateLevel() {
     document.getElementById("span-level").textContent = appState.level;
 }
+
+function disableLeaderboard() {
+    document.getElementById("leaderboard").style.visibility = "hidden";
+}

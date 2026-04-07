@@ -14,6 +14,9 @@ function renderLeaderboard() {
     const list = parent.querySelector("#leaderboard-list");
     for (let l of leaderboardPlayers) {
         const li = document.createElement("li");
+        if (l.id === 1) {
+            li.classList.add("player");
+        }
         li.setAttribute("id", l.position);
         li.classList.add("leaderboard-item");
         li.innerHTML = `
@@ -29,3 +32,9 @@ function renderLeaderboard() {
         list.appendChild(li);
     }
 }
+
+function editLeaderboardHeader(title) {
+    const header = document.getElementById("leaderboard-content").querySelector("h1");
+    header.textContent = title;
+}
+

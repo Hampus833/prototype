@@ -162,3 +162,7 @@ function allQuestionsAnswered() {
     //namnet i leaderboarden är highlightat
     // istället för leaderboard står det typ resultat
 }
+
+function checkIfEnd() {
+
+}

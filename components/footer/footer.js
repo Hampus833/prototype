@@ -84,8 +84,16 @@ function toggleNextScreen() {
     //går man tillbaka till level up screenen efter man svarat på en fråga och trycker continue
     //ska man inte tas till nästa fråga om det skulle kommit en leve up skärm där emellan
     //
-    
     const level = levelUp.find(x => x.id === currentLevelUpScreen);
+    if (appState.question === 6) {
+        if (level.seen) {
+            navigate("/leaderboard", {page: "leaderboard"});
+            disableLeaderboard();
+            editLeaderboardHeader("End result");
+            return;
+        }
+    }
+    
     if (!levelUpPage) {
         showLevelUpScreen();
     } else {
