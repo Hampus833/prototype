@@ -88,11 +88,17 @@ function navigateToLeaderboard(event) {
 function setNickname(nickname, input) {
        //todo set maximum length of nickname to something around 10-12 characters
        //maybe also check if nickname in appState is empty or not otherwise continue with empty input
-    if (nickname.length > 0) {
-        appState.nickname = nickname;
-        document.getElementById("nickname").textContent = nickname;
-        input.value = "";
-        return true;
+       const formatted = nickname.trim().replace(/[\r\n]+/gm, '');
+    if (formatted.length > 0) {
+        if (formatted.length < 13) {
+            appState.nickname = nickname;
+            document.getElementById("nickname").textContent = nickname;
+            input.value = "";
+            return true;
+        } else {
+            alert("Nickname can't be longer than 12 characters");
+            return false;
+        }
     } else {
         alert("Nickname can't be empty");
         return false;

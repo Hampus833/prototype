@@ -5,6 +5,7 @@ let appState = {
     level: 1,
 }
 
+let started = false;
 let quizPage = false;
 let levelUpPage = false;
 let currentLevelUpScreen = 1;

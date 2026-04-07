@@ -17,6 +17,7 @@ function renderStart() {
 
 
     parent.querySelector("#start-button").addEventListener("click", startQuiz);
+    disableStart();
 }
 
 function startQuiz(event) {
@@ -32,9 +33,17 @@ function startQuiz(event) {
             setTimeout(() => {
                 unlockBadge(8);
             }, 2500);
+            started = true;
             navigate("/quiz", {page: "quiz"});
 
             // showContinue();
     }
 }
 
+function disableStart() {
+    if (started) {
+        const button = document.getElementById("start-button")
+        button.removeEventListener("click", startQuiz);
+        button.classList.add("answered");
+    }
+}
