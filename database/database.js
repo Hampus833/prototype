@@ -110,7 +110,7 @@ const quizQuestions = [
     correctAnswer: "1",
     answered: false,
     buttonPressed: 0,
-    points: 100,
+    points: 200,
     type: "code"
 },
 {
@@ -120,7 +120,7 @@ const quizQuestions = [
     correctAnswer: 3,
     answered: false,
     buttonPressed: 0,
-    points: 100,
+    points: 200,
     type: "quiz"
 },
 {
@@ -130,7 +130,7 @@ const quizQuestions = [
     correctAnswer: "1",
     answered: false,
     buttonPressed: 0,
-    points: 100,
+    points: 200,
     type: "code"
 },
 {
@@ -140,7 +140,7 @@ const quizQuestions = [
     correctAnswer: "1",
     answered: false,
     buttonPressed: 0,
-    points: 100,
+    points: 300,
     type: "code"
 },
 ];
