@@ -1,12 +1,13 @@
 let appState = {
     nickname: "Nickname",
-    points: 0,
+    points: 1100,
     question: 1,
     level: 1,
 }
 
 let quizPage = false;
 let levelUpPage = false;
+let currentLevelUpScreen = 1;
 
 window.addEventListener("popstate", (event) => {
     if (event.state) {
@@ -52,7 +53,6 @@ function renderPage(state) {
         quizPage = false;
         levelUpPage = false;
         showContinue();
-        // inactiveContinue();
     }
     
     if (state.page === "quiz") {

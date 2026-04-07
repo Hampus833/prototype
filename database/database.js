@@ -62,6 +62,25 @@ const leaderboardPlayers = [
     },
 ];
 
+const levelUp = [
+{
+    id: 1,
+    seen: false,
+},
+{
+    id: 2,
+    seen: false,
+},
+{
+    id: 3,
+    seen: false,
+},
+{
+    id: 4,
+    seen: false,
+},
+]
+
 const quizQuestions = [
 {
     question: 1,

@@ -51,57 +51,55 @@ function updatePoints() {
 }
 
 function nextQuestion(event) {
-    
+    //om man gått bak ett steg och sen trycker continue istället för frampilen
+    //fuckas hela quizzet upp måste på något sätt kolla ifall frågan redan är besvarad
     //unlock the correct badges
     switch (appState.question) {
         case 1:
-            if (!levelUpPage) {
-                console.log("current question: " + appState.question);
-                showLevelUpScreen();
-            } else {
-                showQuestionScreen();
-                console.log("current question: " + appState.question);
-            }
+            toggleNextScreen();
             break;
         case 2:
-            if (!levelUpPage) {
-                console.log("current question: " + appState.question);
-                showLevelUpScreen();
-            } else {
-                showQuestionScreen();
-                console.log("current question: " + appState.question);
-            }
+            toggleNextScreen();
             break;
         case 3:
-            console.log("current question: " + appState.question);
             updateQuestion();
             questionType();
             break;
         case 4:
-            if (!levelUpPage) {
-                console.log("current question: " + appState.question);
-                showLevelUpScreen();
-            } else {
-                showQuestionScreen();
-                console.log("current question: " + appState.question);
-            }
+            toggleNextScreen();
             break;
         case 5:
-            console.log("current question: " + appState.question);
             updateQuestion();
             questionType();
             break;
         case 6:   
-            if (!levelUpPage) {
-                console.log("current question: " + appState.question);
-                showLevelUpScreen();
-            } else {
-                showQuestionScreen();
-                console.log("current question: " + appState.question);
-            }
+            toggleNextScreen();
             break;
         default:
             break;
+    }
+}
+
+function toggleNextScreen() {
+    //går man tillbaka till level up screenen efter man svarat på en fråga och trycker continue
+    //ska man inte tas till nästa fråga om det skulle kommit en leve up skärm där emellan
+    //
+    
+    const level = levelUp.find(x => x.id === currentLevelUpScreen);
+    if (!levelUpPage) {
+        showLevelUpScreen();
+    } else {
+        if (!level.seen) {
+            showLevelUpScreen();
+            return;
+        } else {
+            showQuestionScreen();
+        }
+
+        if (level.seen) {
+            currentLevelUpScreen = currentLevelUpScreen + 1;
+            console.log(currentLevelUpScreen);
+        }
     }
 }
 

@@ -103,19 +103,15 @@ function questionType() {
 
 function leaderboardPositionBadges() {
     const pos = leaderboardPlayers.findIndex(x => x.id === 1);
-
     switch (pos){
         case 0:
             unlockBadge(1);
-            //code to unlock badge
             break;
         case 1:
             unlockBadge(2);
-            //code to unlock badge
             break;
         case 2:
             unlockBadge(3);
-            //code to unlock badge
             break;
         default:
             break;
@@ -130,9 +126,15 @@ function updatePlayerLevel() {
 }
 
 function showLevelUpScreen() {
-    updatePlayerLevel();
-    unlockLevelBadge(appState.level);
-    navigate("/level-up", {page: "level-up"});
+    const level = levelUp.find(x => x.id === currentLevelUpScreen);
+    if (!level.seen) {
+        updatePlayerLevel();
+        unlockLevelBadge(appState.level);
+        navigate("/level-up", {page: "level-up"});
+        level.seen = true;
+    } else {
+        navigate("/level-up", {page: "level-up"});
+    }
 }
 
 function showQuestionScreen() {
@@ -142,6 +144,10 @@ function showQuestionScreen() {
 
 function updateQuestion() {
     appState.question = appState.question + 1;
+}
+
+function allAnswersCorrect() {
+
 }
 
 // function checkIfLastQuestion() {

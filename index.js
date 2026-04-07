@@ -1,9 +1,12 @@
 //todo
-//bestämma när användaren ska levla up och relevant kod för det
 //fixa så badges låses upp vid korrekta tidpunkter
 //om quizzet redan är startat och man trycker back 
 //ska man inte behöva skriva in sitt namn igen och på så sätt skapa en ny användare
-//ifall man går till leaderboard på level up skärmen ska man komma tillbaka till den och inte nästa fråga.
+//fixa slutskärm
+//fixa korrekt poäng för varje fråga
+//byta ut alla placeholders
+//om man gått bak ett steg och sen trycker continue istället för frampilen
+//fuckas hela quizzet upp måste på något sätt kolla ifall frågan redan är besvarad
 
 renderHeader(document.querySelector("body"));
 renderStart();
