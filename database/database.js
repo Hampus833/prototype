@@ -84,8 +84,8 @@ const levelUp = [
 const quizQuestions = [
 {
     question: 1,
-    description: `Vad kommer loggas i konsolen?             
-    let x;
+    description: `Vad kommer loggas i konsolen?<br>           
+    let x;<br>
     console.log(x)`,
     answers: ["undefined", "null", "0", "x"],
     correctAnswer: 1,
@@ -96,7 +96,14 @@ const quizQuestions = [
 },
 {
     question: 2,
-    description: `This is the second question`,
+    description: `Vad händer när den här koden körs?<br><br>
+    const input = "0"<br><br>
+    if (input) {<br>
+        &nbsp;console.log("Valid");<br>
+    } else {<br>
+        &nbsp;console.log("Invalid");<br>
+    }
+    `,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 3,
     answered: false,
