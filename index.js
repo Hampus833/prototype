@@ -3,7 +3,6 @@
 //skriva relevant text till frågorna
 //fixa frågor
 //skriva starttexten
-//göra användarnamnet lila
 
 renderHeader(document.querySelector("body"));
 renderStart();

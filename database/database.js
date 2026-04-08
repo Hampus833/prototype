@@ -84,9 +84,10 @@ const levelUp = [
 const quizQuestions = [
 {
     question: 1,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Curabitur semper sapien vitae arcu elementum, eget sagittis mi pellentesque.`,
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    description: `Vad kommer loggas i konsolen?             
+    let x;
+    console.log(x)`,
+    answers: ["undefined", "null", "0", "x"],
     correctAnswer: 1,
     answered: false,
     buttonPressed: 0,
