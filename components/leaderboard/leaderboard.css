@@ -44,7 +44,7 @@
 
 #player-pos {
     justify-content: start;
-    gap: 32px;
+    /* gap: 32px; */
     width: 219px;
 }
 
@@ -59,4 +59,5 @@
 
 #leaderboard-pos {
     flex-basis: 45px;
+    margin-right: 16px;
 }
