@@ -4,61 +4,61 @@ const leaderboardPlayers = [
         position: 1,
         name: "Bullwhips",
         level: 5,
-        points: 1000
+        points: 1300
     },
     {
         position: 2,
         name: "Flare",
         level: 5,
-        points: 900
+        points: 1000
     },
     {
         position: 3,
         name: "Killerbean",
         level: 5,
-        points: 800
+        points: 700
     },
     {
         position: 4,
         name: "HappyMelee",
         level: 5,
-        points: 700
+        points: 600
     },
     {
         position: 5,
         name: "McLovin",
         level: 4,
-        points: 600
+        points: 500
     },
     {
         position: 6,
         name: "xxtimpanxx",
         level: 4,
-        points: 500
+        points: 400
     },
     {
         position: 7,
         name: "Falcon",
         level: 4,
-        points: 400
+        points: 300
     },
     {
         position: 8,
         name: "Jonas24",
         level: 3,
-        points: 300
+        points: 200
     },
     {
         position: 9,
         name: "dev1ce",
         level: 3,
-        points: 200
+        points: 100
     },
     {
         position: 10,
         name: "EliGE",
         level: 2,
-        points: 100
+        points: 50
     },
 ];
 
@@ -109,7 +109,7 @@ const quizQuestions = [
     correctAnswer: 3,
     answered: false,
     buttonPressed: 0,
-    points: 100,
+    points: 200,
     type: "quiz",
     info: `"0" är en icke-tom sträng vilket gör den truthy`
 },
@@ -136,10 +136,10 @@ const quizQuestions = [
     Börja med att skapa ett p element med texten: "Change my color"
     `,
     answers: [],
-    correctAnswer: "<p>Change my color</p>",
+    correctAnswer: "<p>change my color</p>",
     answered: false,
     buttonPressed: 0,
-    points: 200,
+    points: 300,
     type: "code",
     info: ""
 },
@@ -150,7 +150,7 @@ const quizQuestions = [
     correctAnswer: "<button>color changer</button>",
     answered: false,
     buttonPressed: 0,
-    points: 200,
+    points: 300,
     type: "code",
     info: ""
 },
