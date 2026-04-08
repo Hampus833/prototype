@@ -11,19 +11,21 @@ function renderCodePage() {
     showContinue();
     inactiveContinue();
     parent.innerHTML = `
-    <div id="flex">
-        <div id="code-content">
-            <h2>Stage ${currQ.question}</h2>
-            <p id="code-description">${currQ.description}</p>
-            <textarea id="code-area" name="code">
-            Write your code
-            </textarea>
-            <div id="reload-container">
-                <p id="run-code">Run</p>
-                <div id="reload"></div>
-            </div>
-            </div>
-        <div id="user-code-area"></div>
+    <div id="real-flex-test">
+        <div id="flex">
+            <div id="code-content">
+                <h2>Stage ${currQ.question}</h2>
+                <p id="code-description">${currQ.description}</p>
+                <textarea id="code-area" name="code">
+                Write your code
+                </textarea>
+                <div id="reload-container">
+                    <p id="run-code">Run</p>
+                    <div id="reload"></div>
+                </div>
+                </div>
+            <div id="user-code-area"></div>
+        </div>
     </div>
     `;
 

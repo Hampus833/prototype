@@ -5,6 +5,13 @@
     justify-content: center;
 }
 
+#real-flex-test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
 #code-content {
     display: flex;
     flex-direction: column;
