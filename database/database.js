@@ -106,16 +106,6 @@ const quizQuestions = [
 {
     question: 3,
     description: `This is the third question`,
-    answers: [],
-    correctAnswer: "<button>test</button>",
-    answered: false,
-    buttonPressed: 0,
-    points: 200,
-    type: "code"
-},
-{
-    question: 4,
-    description: `This is the fourth question`,
     answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
     correctAnswer: 3,
     answered: false,
@@ -124,10 +114,20 @@ const quizQuestions = [
     type: "quiz"
 },
 {
+    question: 4,
+    description: `This is the fourth question`,
+    answers: [],
+    correctAnswer: "<p>Change color</p>",
+    answered: false,
+    buttonPressed: 0,
+    points: 200,
+    type: "code"
+},
+{
     question: 5,
     description: `This is the fifth question`,
     answers: [],
-    correctAnswer: "1",
+    correctAnswer: "<button>color</button>",
     answered: false,
     buttonPressed: 0,
     points: 200,
@@ -137,7 +137,7 @@ const quizQuestions = [
     question: 6,
     description: `This is the sixth question`,
     answers: [],
-    correctAnswer: "1",
+    correctAnswer: "p {color: blue}",
     answered: false,
     buttonPressed: 0,
     points: 300,

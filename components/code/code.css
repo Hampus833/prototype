@@ -100,6 +100,19 @@ textarea {
     padding: 8px;
 }
 
-#user-code {
+.user-code {
     all: revert;
+    margin: 0;
+}
+
+#user-button {
+    all: revert;
+}
+
+#user-button:hover {
+    cursor: pointer;
+}
+
+#user-p {
+    margin-bottom: 4px;
 }

@@ -1,7 +1,11 @@
 //todo
-//om quizzet redan är startat och man trycker back 
-//ska man inte behöva skriva in sitt namn igen och på så sätt skapa en ny användare
 //byta ut alla placeholders
+//ifall man svarar fel och sen rätt blir inte bordern på textarean grön? fixa
+//skriva relevant text till frågorna
+//fixa frågor
+//skriva starttexten
+//göra användarnamnet lila
+//
 
 renderHeader(document.querySelector("body"));
 renderStart();

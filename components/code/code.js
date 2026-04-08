@@ -1,4 +1,7 @@
 let answer = "";
+let p;
+let button;
+let css;
 
 function renderCodePage() {
     quizPage = true;
@@ -29,6 +32,9 @@ function renderCodePage() {
     document.getElementById("run-code").addEventListener("click", checkCode);
     checkIfCodeSubmitted();
     
+    if (appState.question > 3) {
+        addPreviousCode();
+    }
 }
 
 function removeText(event) {
@@ -89,7 +95,6 @@ function checkIfCodeSubmitted() {
         } else {
             textArea.classList.add("answered-incorrectly");
         }
-
         activeContinue();
     }
 }
@@ -101,9 +106,60 @@ function noEventListener() {
 }
 
 function runCode(code) {
+    if (appState.question != 6) {
+        const codeArea = document.getElementById("user-code-area");
+        codeArea.innerHTML = code;
+        const child = codeArea.firstChild;
+        child.setAttribute("class", "user-code");
+        saveCode(child);
+    } else {
+        saveCode(code);
+    }
+}
+
+function saveCode(code) {
+    console.log(code);
+    switch(appState.question) {
+        case 4:
+            p = code;
+            p.setAttribute("id", "user-p");
+            break;
+        case 5:
+            button = code;
+            button.setAttribute("id", "user-button");
+            break;
+        case 6:
+            css = code;
+            break;
+        default:
+            break;
+    }
+    addPreviousCode();
+}
+
+function addPreviousCode() {
     const codeArea = document.getElementById("user-code-area");
-    codeArea.innerHTML = code;
-    const child = codeArea.firstChild;
-    child.setAttribute("id", "user-code");
-    console.log(codeArea.firstChild);
+    if (p) {
+        codeArea.appendChild(p)
+    }
+
+    if (button) {
+        codeArea.appendChild(button);
+        button.addEventListener("click", changeTextColor)
+    }
+}
+
+function changeTextColor(event) {
+    event.preventDefault();
+
+    const codeArea = document.getElementById("user-code-area");
+    let style = document.createElement("style");
+    if (css) {
+        if (codeArea.querySelector("style")) {
+            codeArea.querySelector("style").remove();
+        } else {
+            style.innerHTML = "#user-code-area " + css;
+            codeArea.appendChild(style);
+        }
+    }
 }
