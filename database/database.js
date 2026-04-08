@@ -97,7 +97,7 @@ const quizQuestions = [
 {
     question: 2,
     description: `Vad händer när den här koden körs?<br><br>
-    const input = "0"<br><br>
+    const input = "0"<br>
     if (input) {<br>
         &nbsp;console.log("Valid");<br>
     } else {<br>
