@@ -133,7 +133,7 @@ const quizQuestions = [
     question: 4,
     description: `Under kommande frågor ska du skapa en knapp som ändrar 
     färgen på text till blå.<br>
-    Börja med att skapa ett p element med texten: "Change my color"
+    Börja med att skapa ett p element med texten: "change my color"
     `,
     answers: [],
     correctAnswer: "<p>change my color</p>",
