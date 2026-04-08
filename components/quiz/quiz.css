@@ -25,12 +25,12 @@
 #answers {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     width: 100%;
 }
 
 #answers button {
-    height: 65px;
+    height: 60px;
     font-size: 14px;
     border-radius: 4px;
 }
