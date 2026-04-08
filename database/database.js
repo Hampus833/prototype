@@ -104,7 +104,7 @@ const quizQuestions = [
         &nbsp;console.log("Invalid");<br>
     }
     `,
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    answers: ["Invalid", "undefined", "Valid", "Error"],
     correctAnswer: 3,
     answered: false,
     buttonPressed: 0,
@@ -113,9 +113,14 @@ const quizQuestions = [
 },
 {
     question: 3,
-    description: `This is the third question`,
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-    correctAnswer: 3,
+    description: `Vad händer när den här koden körs?<br><br>
+    const numbers = [1, 2, 3, 4];<br>
+    const result = numbers.filter(n => {<br>
+        &nbsp;return n > 2; });<br><br>
+    console.log(result);
+    `,
+    answers: ["undefined", "Error", "[2, 3, 4]", "[3, 4]"],
+    correctAnswer: 4,
     answered: false,
     buttonPressed: 0,
     points: 200,
