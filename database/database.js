@@ -92,7 +92,8 @@ const quizQuestions = [
     answered: false,
     buttonPressed: 0,
     points: 100,
-    type: "quiz"
+    type: "quiz",
+    info: "Variabler som inte blivit tilldelade ett värde är undefined"
 },
 {
     question: 2,
@@ -109,7 +110,8 @@ const quizQuestions = [
     answered: false,
     buttonPressed: 0,
     points: 100,
-    type: "quiz"
+    type: "quiz",
+    info: `"0" är en icke-tom sträng vilket gör den truthy`
 },
 {
     question: 3,
@@ -124,17 +126,22 @@ const quizQuestions = [
     answered: false,
     buttonPressed: 0,
     points: 200,
-    type: "quiz"
+    type: "quiz",
+    info: "funktionen returnerar bara nummer som är större än 2"
 },
 {
     question: 4,
-    description: `This is the fourth question`,
+    description: `Under kommande frågor ska du skapa en knapp som ändrar 
+    färgen på text till blå.<br>
+    Börja med att skapa ett p element med texten: "Change my color"
+    `,
     answers: [],
     correctAnswer: "<p>Change my color</p>",
     answered: false,
     buttonPressed: 0,
     points: 200,
-    type: "code"
+    type: "code",
+    info: ""
 },
 {
     question: 5,
@@ -144,7 +151,8 @@ const quizQuestions = [
     answered: false,
     buttonPressed: 0,
     points: 200,
-    type: "code"
+    type: "code",
+    info: ""
 },
 {
     question: 6,
@@ -154,7 +162,8 @@ const quizQuestions = [
     answered: false,
     buttonPressed: 0,
     points: 300,
-    type: "code"
+    type: "code",
+    info: ""
 },
 ];
 

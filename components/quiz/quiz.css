@@ -41,3 +41,9 @@ button.answered {
     cursor: auto;
     opacity: 0.5;
 }
+
+#quiz-content #info-text {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}

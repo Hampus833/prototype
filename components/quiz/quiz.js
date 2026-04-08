@@ -10,9 +10,11 @@ function renderQuiz() {
         <p>${questionInfo.description}</p>
         <div id="answers">
         </div>
+        <p id="info-text">${questionInfo.info}</p>
     </div>
     `;
 
+    document.getElementById("info-text").style.visibility = "hidden";
     const answers = document.getElementById("answers");
     renderAnswers(answers);
     inactiveContinue();
@@ -50,6 +52,7 @@ function correctAnswer(event) {
     inactiveButtons(clickedButton);
     updateLeaderboard();
     activeContinue();
+    displayInfo();
 }
 
 function checkCorrectAnswer(btn, btnId) {
@@ -60,10 +63,12 @@ function checkCorrectAnswer(btn, btnId) {
             unlockBadge(5);
             addPlayerPoints();
             allAnswersCorrect();
+            displayInfo("#65B67E");
         }
     } else {
         unlockBadge(6);
         btn.style.border = "3px solid #B66574";
+        displayInfo("#B66574");
     }
 
 }
@@ -86,8 +91,13 @@ function alreadyAnswered() {
         checkCorrectAnswer(btn, btn.id);
         activeContinue();
         btn.classList.remove("answered");
+
     }
 }
 
-
+function displayInfo(color) {
+    const info = document.getElementById("info-text");
+    info.style.visibility = "visible";
+    info.style.color = color;
+}
 
