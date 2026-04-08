@@ -1,4 +1,8 @@
+let leaderboardOpen = false;
+
 function renderLeaderboard() {
+    leaderboardOpen = true;
+    
     const parent = document.querySelector("main");
     parent.innerHTML = `
     <div id="leaderboard-content">

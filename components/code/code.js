@@ -57,6 +57,10 @@ function checkCode(event) {
         answer = editedAnswer;
         
         if (checkedAnswer) {
+            if (textArea.classList.contains("answered-incorrectly")) {
+                console.log("remove class");
+                textArea.classList.remove("answered-incorrectly");
+            }
             //svarar rätt får poäng och kan inte skriva om
             textArea.classList.add("answered-correct");
             reloadContainer.classList.add("answered");
@@ -64,7 +68,7 @@ function checkCode(event) {
             addPlayerPoints();
             currQ.answered = true;
             allAnswersCorrect();
-            // checkIfCodeSubmitted();
+            unlockBadge(5);
             noEventListener();
             runCode(editedAnswer);
         } else {
@@ -72,6 +76,7 @@ function checkCode(event) {
             textArea.classList.add("answered-incorrectly"); 
             activeContinue();
             currQ.answered = true;
+            unlockBadge(6);
         }
     } else {
         textArea.value = "Answer can't be empty";
@@ -85,7 +90,6 @@ function checkCode(event) {
 function checkIfCodeSubmitted() {
     const q = currentQuestion();
     const textArea = document.getElementById("code-area");
-
     if (q.answered) {
         textArea.value = "";
         textArea.value = answer;

@@ -61,3 +61,11 @@
     flex-basis: 45px;
     margin-right: 16px;
 }
+
+#nickname {
+    color: var(--points-color);
+}
+
+#level {
+    color: var(--points-color);
+}
