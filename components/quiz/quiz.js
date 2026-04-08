@@ -6,7 +6,7 @@ function renderQuiz() {
     const parent = document.querySelector("main");
     parent.innerHTML = `
     <div id="quiz-content">
-        <h2>Stage ${questionInfo.question}</h2>
+        <h2 id="stage-text">Stage ${questionInfo.question}</h2>
         <p>${questionInfo.description}</p>
         <div id="answers">
         </div>
