@@ -106,9 +106,18 @@ function leaderboardPositionBadges() {
     switch (pos){
         case 0:
             unlockBadge(1);
+            setTimeout(() => {
+                unlockBadge(2);
+            }, 2500);
+            setTimeout(() => {
+                unlockBadge(3);
+            }, 5000);
             break;
         case 1:
             unlockBadge(2);
+            setTimeout(() => {
+                unlockBadge(3);
+            }, 2500);
             break;
         case 2:
             unlockBadge(3);
