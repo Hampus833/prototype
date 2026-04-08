@@ -5,11 +5,11 @@
     justify-content: center;
 }
 
-#real-flex-test {
+#real-flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 90%;
 }
 
 #code-content {
@@ -27,12 +27,12 @@
 
 #code-description {
     margin-top: 0px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 #code-content h2 {
-    margin-top: 52px;
-    margin-bottom: 32px;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 textarea {

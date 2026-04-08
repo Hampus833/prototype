@@ -3,61 +3,61 @@ const leaderboardPlayers = [
     {
         position: 1,
         name: "Bullwhips",
-        level: 10,
+        level: 5,
         points: 1000
     },
     {
         position: 2,
         name: "Flare",
-        level: 10,
+        level: 5,
         points: 900
     },
     {
         position: 3,
         name: "Killerbean",
-        level: 10,
+        level: 5,
         points: 800
     },
     {
         position: 4,
         name: "HappyMelee",
-        level: 10,
+        level: 5,
         points: 700
     },
     {
         position: 5,
         name: "McLovin",
-        level: 10,
+        level: 4,
         points: 600
     },
     {
         position: 6,
         name: "xxtimpanxx",
-        level: 10,
+        level: 4,
         points: 500
     },
     {
         position: 7,
         name: "Falcon",
-        level: 10,
+        level: 4,
         points: 400
     },
     {
         position: 8,
         name: "Jonas24",
-        level: 10,
+        level: 4,
         points: 300
     },
     {
         position: 9,
         name: "dev1ce",
-        level: 10,
+        level: 3,
         points: 200
     },
     {
         position: 10,
         name: "EliGE",
-        level: 10,
+        level: 2,
         points: 100
     },
 ];

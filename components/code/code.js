@@ -11,7 +11,7 @@ function renderCodePage() {
     showContinue();
     inactiveContinue();
     parent.innerHTML = `
-    <div id="real-flex-test">
+    <div id="real-flex">
         <div id="flex">
             <div id="code-content">
                 <h2>Stage ${currQ.question}</h2>
