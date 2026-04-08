@@ -145,7 +145,7 @@ const quizQuestions = [
 },
 {
     question: 5,
-    description: `This is the fifth question`,
+    description: `Skapa nu ett button element med texten: "color changer"`,
     answers: [],
     correctAnswer: "<button>color changer</button>",
     answered: false,
@@ -156,7 +156,7 @@ const quizQuestions = [
 },
 {
     question: 6,
-    description: `This is the sixth question`,
+    description: `Skriv css kod för att ändra färgen på ett p element till "blue"`,
     answers: [],
     correctAnswer: "p {color: blue}",
     answered: false,
