@@ -45,7 +45,7 @@ const leaderboardPlayers = [
     {
         position: 8,
         name: "Jonas24",
-        level: 4,
+        level: 3,
         points: 300
     },
     {
