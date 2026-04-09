@@ -1,12 +1,16 @@
 function renderStart() {
     const parent = document.querySelector("main");
     parent.innerHTML = `
-    <h1 id="start-header">Welcome</h1>
+    <h1 id="start-header">Välkommen</h1>
     <div id="start-content">
         <p id="info-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel  
-        imperdiet dui. Aliquam pulvinar venenatis ante, sed tristique turpis  ullamcorper at. Suspendisse potenti. Nunc sagittis eros maximus,  
-        fringilla elit sit amet, dictum odio. Vestibulum leo justo, consequat et tempus eget, feugiat in arcu. Cras pellentesque malesuada tempor.
+        Du kommer ta del av ett spelifierat quiz. Frågorna har fokus i webbutveckling och det kommer finnas
+        frågor om javascript, html samt css. Under quizzets gång kommer du ta del av flera spel-element som en leaderboard,
+        poäng, badges och levlar. Genom att svara på frågorna levlar du upp och om du svarar rätt får du poäng
+        På leaderboarden kan du se vilken position du ligger på jämfört med andra spelare, 
+        baserat på dina poäng. Badges låser du upp under quizzets gång. Klicka på badges för att se vilka du låst upp 
+        och vilka du har kvar att låsa upp. Hovra över en badge för att se hur du låser upp den. När du är redo att starta
+        skriv in ett nickname och tryck på start. 
         </p>
         <div id="nickname-box">
             <input type="text" id="nickname-input" name="nickname" placeholder="Enter your nickname"></input>
