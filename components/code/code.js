@@ -51,10 +51,14 @@ function checkCode(event) {
     const currQ = currentQuestion()
     const text = textArea.value;
     const reloadContainer = document.getElementById("reload-container");
-    const editedAnswer = text.toLowerCase().trim().replace(/[\r\n]+/gm, '');
+//    const testEditedAnswer = text.toLowerCase().trim().replace(/[\r\n]+/gm, '');
+    const editedAnswer = text.toLowerCase().trim().replace(/\s+/g, '');
 
     if (editedAnswer !== "") {
-        const editedQuestion = currQ.correctAnswer.toLowerCase().trim().replace(/[\r\n]+/gm, '');
+//        const editedQuestion = currQ.correctAnswer.toLowerCase().trim().replace(/[\r\n]+/gm, '');
+        const editedQuestion = currQ.correctAnswer.toLowerCase().trim().replace(/\s+/g, '');
+
+        
         const checkedAnswer = checkStrings(editedAnswer, editedQuestion);
         answer = editedAnswer;
         
@@ -95,7 +99,7 @@ function checkIfCodeSubmitted() {
     if (q.answered) {
         textArea.value = "";
         textArea.value = answer;
-        if (answer == q.correctAnswer) {
+        if (answer.toLowerCase().trim().replace(/\s+/g, '') == q.correctAnswer.toLowerCase().trim().replace(/\s+/g, '')) {
             textArea.classList.add("answered-correct");
             noEventListener();
         } else {

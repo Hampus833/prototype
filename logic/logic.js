@@ -172,6 +172,3 @@ function allQuestionsAnswered() {
     // istället för leaderboard står det typ resultat
 }
 
-function checkIfEnd() {
-
-}

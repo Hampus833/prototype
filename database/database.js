@@ -133,10 +133,10 @@ const quizQuestions = [
     question: 4,
     description: `Under kommande frågor ska du skapa en knapp som ändrar 
     färgen på text till blå.<br>
-    Börja med att skapa ett p element med texten: "change my color", i html kod
+    Börja med att skapa ett p element med texten: "color", i html kod
     `,
     answers: [],
-    correctAnswer: "<p>change my color</p>",
+    correctAnswer: "<p>color</p>",
     answered: false,
     buttonPressed: 0,
     points: 300,
@@ -145,9 +145,9 @@ const quizQuestions = [
 },
 {
     question: 5,
-    description: `Skriv html kod för att skapa ett button element med texten: "color changer".`,
+    description: `Skriv html kod för att skapa ett button element med texten: "changer".`,
     answers: [],
-    correctAnswer: "<button>color changer</button>",
+    correctAnswer: "<button>changer</button>",
     answered: false,
     buttonPressed: 0,
     points: 300,
