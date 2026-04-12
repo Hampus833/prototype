@@ -158,7 +158,7 @@ const quizQuestions = [
     question: 6,
     description: `Skriv css kod för att ändra färgen på ett p element till "blue"`,
     answers: [],
-    correctAnswer: "p {color: blue}",
+    correctAnswer: "p {color: blue;}",
     answered: false,
     buttonPressed: 0,
     points: 300,
